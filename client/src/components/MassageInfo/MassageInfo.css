@@ -33,6 +33,7 @@
   animation: card-fade-in 1s forwards;
   overflow-y: hidden;
   overflow-x: hidden;
+  position: absolute;
 }
 
 @keyframes card-fade-in {
