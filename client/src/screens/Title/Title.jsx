@@ -38,7 +38,7 @@ function Title(props) {
           </div>
       </div>
       <div className="rainbow-container">
-        <RainbowBackground colors={colors}/>
+        <RainbowBackground />
       </div>
     </div>
   );
