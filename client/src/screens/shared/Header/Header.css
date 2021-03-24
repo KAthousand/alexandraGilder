@@ -66,13 +66,13 @@
   width: 5vh;
   position: relative;
   background-color: transparent;
-  border: 2px solid black;
+  border: 2px solid var(--light);
   transition: 1s;
 }
 
 .nav-icon button::before {
   content: "";
-  background-color: black;
+  background-color: var(--light);
   position: absolute;
   top: 1.75vh;
   left: 0.8vh;
@@ -83,7 +83,7 @@
 
 .nav-icon button::after {
   content: "";
-  background-color: black;
+  background-color: var(--light);
   position: absolute;
   bottom: 1.75vh;
   left: 0.8vh;
@@ -98,14 +98,14 @@
   width: 5vh;
   position: relative;
   background-color: transparent;
-  border: 2px solid black;
+  border: 2px solid var(--light);
   transform: rotate(-180deg);
   transition: 1s;
 }
 
 .nav-icon2 button::before {
   content: "";
-  background-color: black;
+  background-color: var(--light);
   position: absolute;
   top: 2.25vh;
   left: 0.8vh;
@@ -117,7 +117,7 @@
 
 .nav-icon2 button::after {
   content: "";
-  background-color: black;
+  background-color: var(--light);
   position: absolute;
   top: 2.25vh;
   left: 0.8vh;
