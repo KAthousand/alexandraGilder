@@ -194,4 +194,7 @@
   .description-text {
     width: 95%;
   }
+  .exit-button-container button {
+    border: none;
+  }
 }
