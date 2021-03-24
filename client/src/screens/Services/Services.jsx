@@ -55,7 +55,7 @@ function Services(props) {
   const [moxa, setMoxa] = useState({
     active: false,
     title: 'Moxa',
-    description: 'Massage + cupping helps to relieve tension by creating suction in areas of need ',
+    description: 'Moxa is a form of heat therapy in which dried plant matter is burned near the surface of your skin with intention to promote circulation and dispel certain pathogenic influences',
     img: moxaIMG,
     price: "Add $10 to Any Massage"
   })
