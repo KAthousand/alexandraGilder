@@ -1,12 +1,8 @@
-import {useEffect, useState} from 'react';
+
 import RainbowBackground from '../../components/RainbowBackground/RainbowBackground';
 import "./Title.css"
 
 function Title(props) {
-  const [colors, setColors] = useState(false);
-  useEffect(() => {
-    setTimeout(() => setColors(!colors), 10000);
-  }, [colors])
   
   const firstName = 'ALEXANDRA';
   const lastName= 'GILDER'
