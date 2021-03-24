@@ -58,8 +58,8 @@
 .exit-button-container button {
   border-radius: 100%;
   border: 1px solid var(--dark);
-  height: 4vh;
-  width: 4vh;
+  height: 50px;
+  width: 50px;
   padding-top: 2px;
   font-size: 1.25em;
   color: var(--dark);
