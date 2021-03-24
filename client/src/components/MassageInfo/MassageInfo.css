@@ -31,7 +31,8 @@
   width: 60%;
   max-width: 500px;
   animation: card-fade-in 1s forwards;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 @keyframes card-fade-in {
