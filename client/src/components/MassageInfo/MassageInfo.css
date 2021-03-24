@@ -193,6 +193,6 @@
     width: 95%;
   }
   .exit-button-container button {
-    border-radius: 0;
+    border: none;
   }
 }
