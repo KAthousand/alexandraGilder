@@ -146,6 +146,7 @@
   text-align: center;
   z-index: 5;
   padding-bottom: 10px;
+  font-size: 0.8rem;
 }
 
 .back-to-top {
@@ -349,6 +350,7 @@
 @media (max-width: 580px) {
   .about-title {
     margin-left: 5%;
+    font-size: 0.95rem;
   }
   .about-info {
     width: 90%;
