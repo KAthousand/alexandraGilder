@@ -1,13 +1,15 @@
 .about-container {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
 }
 
 .about-content {
   padding-top: 5%;
   height: 100%;
+  min-height: 800px;
   width: 80%;
-  margin: 10%;
+  max-width: 1100px;
+  margin: 10% auto;
   position: relative;
   background-color: var(--rainbow-grey-blue);
   border-radius: 20px;
@@ -45,6 +47,8 @@
   align-items: center;
   height: 80%;
   width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .about-image {
@@ -55,7 +59,7 @@
   border-radius: 5px;
   border: 10px solid var(--background);
   height: 80%;
-  width: 25%;
+  width: 30%;
   z-index: 3;
   box-shadow: 0 15px 10px rgba(90, 90, 90, 0.2);
   transform: translateY(30px);
@@ -72,7 +76,7 @@
 .about-info {
   height: 80%;
   width: 35%;
-  font-size: 1.15rem;
+  font-size: 1rem;
   z-index: 3;
   border: 1px solid var(--background);
   padding: 25px 50px;
@@ -108,8 +112,8 @@
 }
 
 .contact-number {
-  height: 150px;
-  width: 150px;
+  height: 125px;
+  width: 125px;
   background-image: url("../../assets/raindrop.png");
   background-size: contain;
   background-position: center;
@@ -117,12 +121,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
   margin-right: 2%;
+  font-size: 0.8rem;
 }
 
 .contact-email {
-  height: 175px;
-  width: 175px;
+  height: 150px;
+  width: 150px;
   background-image: url("../../assets/cryo.png");
   background-size: contain;
   background-position: center;
@@ -130,6 +136,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.8rem;
 }
 
 .house-call {
@@ -262,6 +269,12 @@
   bottom: -10%;
   right: -20%;
   opacity: 0.4;
+}
+
+@media (max-height: 750px) {
+  .about-info {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1600px) {
