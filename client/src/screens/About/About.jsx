@@ -22,7 +22,7 @@ function About(props) {
           <p className='contact-number'>(248) 613-8418</p>
           <p className='contact-email'>lexandraga@gmail.com</p>
         </div>
-        <p className='house-call'> *House calls available upon request, request add travel fees based on location. Contact for more information.</p>
+        <p className='house-call'> *House calls available upon request, add travel fees based on location. Contact for more information.</p>
         <div className='about-shape1'></div>
         <div className='about-shape2'></div>
         <div className='about-shape3'></div>
