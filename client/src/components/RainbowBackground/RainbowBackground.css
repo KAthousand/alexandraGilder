@@ -78,7 +78,7 @@
     var(--rainbow-green),
     var(--rainbow-yellow)
   );
-  filter: blur(3.5rem);
+  filter: blur(2.5rem);
   position: absolute;
   top: -10%;
   right: 5%;
@@ -89,14 +89,13 @@
 }
 
 .center-right {
-  border: 2px solid red;
   background: linear-gradient(
     to right,
     var(--rainbow-light-blue),
     var(--rainbow-purple),
     var(--rainbow-pink)
   );
-  /* filter: blur(3.5rem); */
+  filter: blur(2.5rem);
   position: absolute;
   height: 25%;
   width: 40%;
@@ -123,7 +122,7 @@
     var(--rainbow-purple),
     var(--rainbow-pink)
   );
-  filter: blur(3rem);
+  filter: blur(2.5rem);
   position: absolute;
   height: 20%;
   width: 40%;
@@ -154,8 +153,8 @@
     var(--rainbow-purple),
     var(--rainbow-pink)
   );
-  border: 2px solid red;
-  /* filter: blur(4rem); */
+
+  filter: blur(2.5rem);
   position: absolute;
   height: 75%;
   width: 55%;
@@ -167,7 +166,7 @@
 
 .center-left {
   background: var(--rainbow-yellow);
-  filter: blur(5rem);
+  filter: blur(2.5rem);
   height: 50%;
   width: 20%;
   position: absolute;
@@ -183,7 +182,7 @@
     var(--rainbow-green),
     var(--rainbow-light-blue)
   );
-  filter: blur(4rem);
+  filter: blur(2.5rem);
   position: absolute;
   height: 25%;
   width: 25%;
@@ -199,7 +198,7 @@
     var(--rainbow-light-blue),
     var(--rainbow-grey-blue)
   );
-  filter: blur(4rem);
+  filter: blur(2.5rem);
   position: absolute;
   height: 35%;
   width: 50%;
