@@ -14,7 +14,8 @@ function About(props) {
           <div className='about-info'>
             <p>Alexandra is an intuitive practitioner with an aim to help clients experience alleviation of pain symptoms, discomfort and stress.</p><br/>
             <p>She believes in the body's natural processes, its ability to heal itself and help assist others in whatever form of therapies best suited for their needs</p><br/>
-            <p>Nurturing, theraputic and attentive with a focus on specific needs to build a customized session for everyone</p>
+            <p>Nurturing, therapeutic and attentive with a focus on specific needs to build a customized session for everyone</p><br/>
+            <p>Prices reflect the idea that clients can build a maintenance routine to manage stress and tension contact by phone to schedule.</p>
             </div>
         </div>
         <div className='about-contact'>

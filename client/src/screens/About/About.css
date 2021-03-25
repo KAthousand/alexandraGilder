@@ -70,11 +70,16 @@
 }
 
 .about-info {
+  height: 80%;
   width: 35%;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   z-index: 3;
   border: 1px solid var(--background);
-  padding: 35px 55px;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .about-info p {
@@ -257,6 +262,12 @@
   bottom: -10%;
   right: -20%;
   opacity: 0.4;
+}
+
+@media (max-width: 1600px) {
+  .about-info {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1300px) {
