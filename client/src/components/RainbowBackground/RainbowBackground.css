@@ -57,7 +57,7 @@
   );
   clear: both;
   /* border: 2px solid red; */
-  filter: blur(3.5rem);
+  filter: blur(2.5rem);
   position: absolute;
   top: -25%;
   left: 30%;
