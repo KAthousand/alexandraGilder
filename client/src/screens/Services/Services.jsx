@@ -15,7 +15,7 @@ function Services(props) {
   const { visible } = props
   const [deepTissue, setDeepTissue] = useState({
     active: false,
-    title: 'Swedish Massage',
+    title: 'swedish massage',
     description: "Full body treatment sessions catered specifically to client needs with aromatherapy",
     img: swedishIMG,
     price: "60 min - $60",
@@ -24,7 +24,7 @@ function Services(props) {
   })
   const [hotStone, setHotStone] = useState({
     active: false,
-    title: 'Hot Stone Massage',
+    title: 'hot stone massage',
     description: 'Massage with basalt stones, hands and aromatherapy',
     img: cryoIMG,
     price: "60 min - $80",
@@ -47,35 +47,35 @@ function Services(props) {
   })
   const [cupping, setCupping] = useState({
     active: false,
-    title: 'Cupping',
+    title: 'cupping',
     description: 'Massage + cupping helps to relieve tension by creating suction in areas of need. This deep tissue effect helps promote circulation, decrease inflammation, and relieve pain',
     img: cupIMG,
     price: "Add $20 to Any Massage"
   })
   const [moxa, setMoxa] = useState({
     active: false,
-    title: 'Moxa',
+    title: 'moxa',
     description: 'Moxa is a form of heat therapy in which dried plant matter is burned near the surface of your skin with intention to promote circulation and dispel certain pathogenic influences',
     img: moxaIMG,
     price: "Add $10 to Any Massage"
   })
   const [infrared, setInfrared] = useState({
     active: false,
-    title: 'Inrared',
+    title: 'inrared',
     description: 'Bringing all of the benefits of an infrared sauna experience to the massage table ',
     img: infraredIMG,
     price: "Add $10 to Any Massage"
   })
   const [cryotherapyMassage, setCryotherapyMassage] = useState({
     active: false,
-    title: 'Cryotherapy Massage',
+    title: 'cryotherapy Massage',
     description: 'Using this form of cold treatment with massage therapy helps boost the immune system response, decrease inflammation and swelling in areas of injury, and reduce pain',
     img: cryoIMG,
     price: "Add $10 to Any Massage"
   })
   const [cbdMassage, setCbdMassage] = useState({
     active: false,
-    title: 'CBD Massage',
+    title: 'cbd massage',
     description: 'Massage with hands, forearms and CBD oil. Oil placed on joints, bottoms of feet and neck help aid with inflammation and relaxation',
     img: cbdIMG,
     price: "Add $10 to Any Massage"

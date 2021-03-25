@@ -27,9 +27,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80%;
+  height: 90%;
   width: 60%;
-  max-width: 500px;
+  /* min-width: 200px; */
+  max-width: 400px;
   animation: card-fade-in 1s forwards;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -178,6 +179,22 @@
 }
 
 /* media qs ----------------------- */
+@media (max-height: 750px) {
+  .info-description {
+    font-size: 0.75em;
+  }
+  .info-content-background {
+    max-width: 350px;
+  }
+  .exit-button-container button {
+    width: 40px;
+    height: 40px;
+  }
+  .info-title {
+    font-size: 0.8em;
+  }
+}
+
 @media (max-width: 800px) {
   .info-content-background {
     width: 80%;
