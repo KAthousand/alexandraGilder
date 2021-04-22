@@ -18,8 +18,8 @@ function Services(props) {
     title: 'swedish massage',
     description: "Full body treatment sessions catered specifically to client needs with aromatherapy",
     img: swedishIMG,
-    price: "60 min - $60",
-    price2: "90 min - $90",
+    price: "60 min - $75",
+    price2: "90 min - $100",
     price3: "Add Deep Tissue - $20"
   })
   const [hotStone, setHotStone] = useState({
@@ -27,8 +27,8 @@ function Services(props) {
     title: 'hot stone massage',
     description: 'Massage with basalt stones, hands and aromatherapy',
     img: cryoIMG,
-    price: "60 min - $80",
-    price2: "90 min - $100"
+    price: "60 min - $90",
+    price2: "90 min - $120"
   })
   const [raindropTechnique, setRaindropTechnique] = useState({
     active: false,
@@ -42,8 +42,8 @@ function Services(props) {
     title: 'Prenatal Massage',
     description: "Customized massage therapy to support the growing body's natural transitions through childbirth",
     img: prenatalIMG,
-    price: "60 min - $50",
-    price2: "90 min - $80"
+    price: "60 min - $60",
+    price2: "90 min - $90"
   })
   const [cupping, setCupping] = useState({
     active: false,
