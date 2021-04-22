@@ -6,7 +6,7 @@ function About(props) {
     <div className='about-container' id='about'>
       <div className='about-content'>
         <div className={visible ? 'about-title about-title-transition' : 'about-title'}>
-          <h1>Meet Alexandra</h1>
+          <h1>Alexandra</h1>
         </div>
         <div className='about-main'>
           <div className={visible ? 'about-image about-image-transition' : "about-image"}>
