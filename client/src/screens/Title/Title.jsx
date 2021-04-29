@@ -34,7 +34,7 @@ function Title(props) {
           </div>
         </div>
         <div className='subtitle'>
-            <h2>LICENSED MASSAGE THERAPIST</h2>
+            <h2>MASSAGE &amp; BODYWORK</h2>
           </div>
       </div>
       <div className="rainbow-container">

@@ -18,7 +18,7 @@ function Services(props) {
     title: 'swedish massage',
     description: "Full body treatment sessions catered specifically to client needs with aromatherapy",
     img: swedishIMG,
-    price: "60 min - $75",
+    price: "60 min - $70",
     price2: "90 min - $100",
     price3: "Add Deep Tissue - $20"
   })
