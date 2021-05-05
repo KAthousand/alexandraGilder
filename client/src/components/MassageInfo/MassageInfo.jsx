@@ -77,6 +77,9 @@ function MassageInfo(props) {
             <p>{massageType.price2}</p>
             <p>{massageType.price3}</p>
           </div>
+          <div className='services-link'>
+            <a href='https://squareup.com/appointments/book/u7lab3kdl18r47/L6X4E0YVBM4WG/services' target='_blank' rel='noreferrer'>BOOK APPOINTMENT</a>
+          </div>
         </div>
         <div className='shape1'></div>
         <div className='shape2'></div>

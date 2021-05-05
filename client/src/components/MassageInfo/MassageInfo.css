@@ -82,6 +82,7 @@
   flex-direction: column;
   margin: 5%;
   color: var(--dark);
+  justify-content: space-evenly;
 }
 
 .description-img {
@@ -176,6 +177,27 @@
   background-position: center;
   height: 35%;
   width: 35%;
+}
+
+.services-link {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 900;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.services-link a {
+  color: white;
+  background-color: var(--dark);
+  z-index: 10;
+  padding: 2% 10%;
+  border-radius: 5px;
+}
+
+.services-link a:hover {
+  background-color: var(--rainbow-orange);
 }
 
 /* media qs ----------------------- */
