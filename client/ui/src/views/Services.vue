@@ -581,7 +581,7 @@ export default {
       justify-content: center !important;
       p {
         margin-bottom: 0;
-        font-size: 1.8rem !important;
+        font-size: 1.6rem !important;
         letter-spacing: 0.8;
         line-height: 2.2rem;
       }

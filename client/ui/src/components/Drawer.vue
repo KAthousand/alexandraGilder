@@ -146,8 +146,8 @@ export default {
   .dash-nav-btn {
     display: block;
     position: absolute;
-    top: 1rem;
-    right: 2rem;
+    top: 3rem;
+    right: 3rem;
     z-index: 99;
   }
 }

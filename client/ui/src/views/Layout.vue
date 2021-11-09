@@ -1,5 +1,11 @@
 <template>
-  <div class="layout-container" id="layout" @wheel.prevent @scroll.prevent>
+  <div
+    class="layout-container"
+    id="layout"
+    ref="layout"
+    @wheel.prevent
+    @scroll.prevent
+  >
     <Nav
       style="position: absolute"
       :anchors="anchors"
@@ -162,16 +168,30 @@ export default Vue.extend({
     },
 
     handleMobileScroll(value) {
+      // const layout = this.$refs.layout
+      const layout = document.querySelector("#layout-cont")
+      const layoutScrollTop = layout.scrollTop
+      console.log(layoutScrollTop)
+
       const title = this.$refs.home
+      const titleTop = title.getBoundingClientRect().top
+
+      // console.log("top" + titleTop)
       const titleBtm = title.getBoundingClientRect().bottom
+      console.log("title" + titleBtm)
       const services = this.$refs.services
-      const servicesBtm = services.getBoundingClientRect().bottom
-      console.log(titleBtm)
-      if (titleBtm > 350) {
+      const servicesTop = services.getBoundingClientRect().top
+
+      const about = this.$refs.about
+      const aboutTop = about.getBoundingClientRect().top
+      // const servicesBtm = services.getBoundingClientRect().bottom
+      // console.log(titleBtm)
+      console.log("services" + servicesTop)
+      if (layoutScrollTop < 475) {
         this.activeSection = 0
-      } else if (titleBtm < 350 && servicesBtm > 400) {
+      } else if (layoutScrollTop >= 475 && layoutScrollTop < 1225) {
         this.activeSection = 1
-      } else if (servicesBtm < 400) {
+      } else if (layoutScrollTop >= 1226) {
         console.log("2")
         this.activeSection = 2
       }

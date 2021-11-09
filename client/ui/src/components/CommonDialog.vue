@@ -116,10 +116,10 @@ export default {
   .v-dialog__content {
     height: 100vh !important;
     width: 100vw !important;
-    margin-top: -3vh;
+    margin-top: -4vh;
   }
   .dialog-card {
-    height: 90vh !important;
+    height: 75vh !important;
     width: 100% !important;
   }
 }

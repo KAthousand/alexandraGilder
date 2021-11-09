@@ -131,7 +131,7 @@ export default {
 
 @media (max-width: 600px) {
   .nav-container {
-    height: 6vh;
+    height: 10vh;
   }
 
   .tabs-container {
@@ -140,7 +140,7 @@ export default {
   .dash-nav-btn {
     display: block;
     position: absolute;
-    top: 0.5rem;
+    top: 2.5vh;
     right: 2rem;
     z-index: 99;
     border: 2px solid var(--light);
