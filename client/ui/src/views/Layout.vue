@@ -184,9 +184,6 @@ export default Vue.extend({
       const elTopPos = el.getBoundingClientRect().top
       console.log(elTopPos)
       layout.scrollBy({ top: elTopPos, behavior: "smooth" })
-      // const count = el.offsetTop - layout.scrollTop
-      // const ref = document.getElementsByTagName("section")[value]
-      // ref.scrollIntoView({ behavior: "smooth" })
     },
   },
 })

@@ -45,7 +45,18 @@
               height="50%"
               class="dialog-img"
               :src="currentMassage.img"
-            ></v-img>
+              :lazy-src="currentMassage.lazySrc"
+            >
+              <template v-slot:placeholder>
+                <v-row class="fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular
+                    indeterminate
+                    :color="'var(--rainbow-pink)'"
+                  >
+                  </v-progress-circular>
+                </v-row>
+              </template>
+            </v-img>
             <v-card-text class="dialog-text-container">
               <v-divider></v-divider>
               <div class="dialog-text" style="height: 70%">
@@ -85,6 +96,7 @@ import guasha from "../assets/img/guasha.png"
 import moxa from "../assets/img/moxa.png"
 import prenatal from "../assets/img/prenatal.png"
 import swedish from "../assets/img/swedish.png"
+import lazy from "../assets/img/aleahia-handsml.png"
 
 export default {
   components: { CommonDialog },
@@ -109,6 +121,7 @@ export default {
         price2: "$100 per 90min session",
         addon: "~add deep tissue for $20~",
         class: "swedish",
+        lazySrc: lazy,
       },
       {
         title: "hot stone massage",
@@ -118,6 +131,7 @@ export default {
         price2: "$120 per 90 min session",
         addon: "",
         class: "hot-stone",
+        lazySrc: lazy,
       },
       {
         title: "raindrop technique",
@@ -128,6 +142,7 @@ export default {
         price2: "",
         addon: "",
         class: "raindrop",
+        lazySrc: lazy,
       },
       {
         title: "prenatal massage",
@@ -138,6 +153,7 @@ export default {
         price2: "$90 per 90 min session",
         addon: "",
         class: "prenatal",
+        lazySrc: lazy,
       },
       {
         title: "cupping",
@@ -158,6 +174,7 @@ export default {
         price2: "",
         addon: "",
         class: "moxa",
+        lazySrc: lazy,
       },
       {
         title: "gua sha",
@@ -168,6 +185,7 @@ export default {
         price2: "",
         addon: "",
         class: "gua-sha",
+        lazySrc: lazy,
       },
       // {
       //   title: "infrared",
@@ -198,6 +216,7 @@ export default {
         price2: "",
         addon: "",
         class: "cbd",
+        lazySrc: lazy,
       },
     ],
   }),
@@ -441,7 +460,6 @@ export default {
   padding: 1rem;
 
   .dialog-img {
-    background-color: green;
     position: relative;
     &:after {
       content: "";
