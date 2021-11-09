@@ -148,8 +148,6 @@ export default {
       right: 30%;
       color: var(--light);
       animation: name-animation 0.75s forwards;
-      // animation-delay: 0.5s;
-
       z-index: 4;
 
       h2 {
@@ -230,7 +228,7 @@ export default {
     .about-img {
       border-radius: 0.8rem;
       position: absolute;
-      filter: blur(0.05rem);
+      opacity: 1 !important;
       top: 35% !important;
       left: auto !important;
       right: 15%;
@@ -252,9 +250,11 @@ export default {
       font-weight: 600;
       letter-spacing: 0.4rem !important;
       line-height: 3rem;
+      opacity: 1 !important;
     }
   }
   .about-text-content {
+    opacity: 1 !important;
     top: 50% !important;
     left: auto !important;
     right: 15% !important;

@@ -381,7 +381,6 @@ export default {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    // transform: rotate(40deg);
     position: absolute;
     left: 44%;
     bottom: 5%;
@@ -576,6 +575,13 @@ export default {
 }
 
 @media (max-width: 600px) {
+  .services-title {
+    opacity: 1;
+  }
+  .service-btn {
+    opacity: 1 !important;
+  }
+
   .dialog-text-container {
     .dialog-text {
       justify-content: center !important;

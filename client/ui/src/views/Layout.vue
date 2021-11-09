@@ -56,10 +56,9 @@ export default Vue.extend({
     offsets: [],
     touchStartY: 0,
     anchors: ["home", "services", "about", "information"],
+    layoutScrollTop: 0,
   }),
   created() {
-    window.addEventListener("touchmove", this.handleMobileScroll)
-    window.addEventListener("scroll", this.handleMobileScroll)
     window.addEventListener("DOMMouseScroll", this.handleMouseWheelDOM) // Mozilla Firefox
     window.addEventListener("mousewheel", this.handleMouseWheel, {
       passive: false,
@@ -68,8 +67,6 @@ export default Vue.extend({
     // window.addEventListener("touchmove", this.touchMove, { passive: false }) // mobile devices
   },
   destroyed() {
-    window.removeEventListener("touchmove", this.handleMobileScroll)
-    window.removeEventListener("scroll", this.handleMobileScroll)
     window.removeEventListener("mousewheel", this.handleMouseWheel, {
       passive: false,
     }) // chrome + other browsers
@@ -167,36 +164,6 @@ export default Vue.extend({
       setTimeout(() => {
         this.inMove = false
       }, 500)
-    },
-
-    handleMobileScroll(value) {
-      // const layout = this.$refs.layout
-      const layout = document.querySelector("#layout-cont")
-      const layoutScrollTop = layout.scrollTop
-      console.log(layoutScrollTop)
-
-      const title = this.$refs.home
-      const titleTop = title.getBoundingClientRect().top
-
-      // console.log("top" + titleTop)
-      const titleBtm = title.getBoundingClientRect().bottom
-      console.log("title" + titleBtm)
-      const services = this.$refs.services
-      const servicesTop = services.getBoundingClientRect().top
-
-      const about = this.$refs.about
-      const aboutTop = about.getBoundingClientRect().top
-      // const servicesBtm = services.getBoundingClientRect().bottom
-      // console.log(titleBtm)
-      console.log("services" + servicesTop)
-      if (layoutScrollTop < 475) {
-        this.activeSection = 0
-      } else if (layoutScrollTop >= 475 && layoutScrollTop < 1225) {
-        this.activeSection = 1
-      } else if (layoutScrollTop >= 1226) {
-        console.log("2")
-        this.activeSection = 2
-      }
     },
 
     handleRouteTouch(value) {

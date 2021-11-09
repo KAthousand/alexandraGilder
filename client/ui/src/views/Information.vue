@@ -313,50 +313,6 @@ i {
   .container {
     padding: 4vh 0 0 0;
   }
-  //   .container {
-  //     padding: 6vh 0 0 0;
-  //   }
-  //   .information-card {
-  //     border-radius: 0px !important;
-  //     flex-direction: column;
-  //   }
-  //   .information-content {
-  //     padding-top: 4rem;
-  //     height: 100% !important;
-  //     width: 100% !important;
-  //   }
-  //   .map-container {
-  //     display: none;
-  //     height: 0 !important;
-  //   }
-
-  //   .location-img {
-  //     height: 20% !important;
-  //     width: 90% !important;
-  //     margin-bottom: 3rem !important;
-  //   }
-
-  //   .contact-info {
-  //     justify-content: center;
-  //     flex-wrap: wrap;
-  //     height: 100%;
-  //     margin-top: 3rem !important;
-  //   }
-
-  //   .contact-email,
-  //   .contact-phone,
-  //   .contact-insta {
-  //     height: 10rem !important;
-  //     width: 50% !important;
-  //     margin: 0 0 1rem 0 !important;
-  //   }
-  //   i {
-  //     transform: scale(4.5);
-  //   }
-
-  //   .info {
-  //     padding: 0 4rem !important;
-  //   }
 }
 @media screen and (max-height: 400px) and (max-width: 850px) {
   .container {
