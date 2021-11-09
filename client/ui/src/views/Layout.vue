@@ -12,6 +12,7 @@
       :activeSection="activeSection"
       @route-click="handleRouteClick"
       @nav-click="handleNavClick"
+      @cancel-touch="handleCancelTouch"
     />
     <Drawer
       :open="open"
@@ -19,13 +20,19 @@
       :activeSection="activeSection"
       @route-click="handleRouteClick"
       @nav-click="handleNavClick"
+      @cancel-touch="handleCancelTouch"
+      @restart-touch="handleRestartTouch"
     />
     <div class="layout-content">
       <section class="fullpage" id="home" ref="home">
         <Title />
       </section>
       <section class="fullpage" id="services" ref="services">
-        <Services :activeSection="activeSection" />
+        <Services
+          :activeSection="activeSection"
+          @cancel-touch="handleCancelTouch"
+          @restart-touch="handleRestartTouch"
+        />
       </section>
       <section class="fullpage" id="about" ref="about">
         <About :activeSection="activeSection" />
@@ -105,6 +112,7 @@ export default Vue.extend({
     touchStart(e) {
       e.preventDefault()
       this.touchStartY = e.touches[0].clientY
+      console.log("touch")
     },
 
     touchMove(e) {
@@ -163,9 +171,18 @@ export default Vue.extend({
       }, 500)
     },
 
-    // handleMobile(){
-    //   const title =
-    // }
+    handleCancelTouch() {
+      console.log("cancel")
+      window.removeEventListener("touchstart", this.touchStart)
+      window.removeEventListener("touchmove", this.touchMove)
+      document.body.classList.add("fixed")
+    },
+    handleRestartTouch() {
+      console.log("restart")
+      window.addEventListener("touchstart", this.touchStart)
+      window.addEventListener("touchmove", this.touchMove)
+      document.body.classList.remove("fixed")
+    },
   },
 })
 </script>

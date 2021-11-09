@@ -9,7 +9,11 @@
     <v-card class="dialog-card" :color="'var(--background)'">
       <v-card-title class="d-flex justify-center">
         <slot name="title"></slot>
-        <v-btn class="close-btn" icon @click="closeModal()"
+        <v-btn
+          class="close-btn"
+          icon
+          @click="closeModal()"
+          @touchstart="closeTouchModal()"
           ><v-icon class="close-icon" color="secondary"
             >highlight_off</v-icon
           ></v-btn
@@ -43,6 +47,9 @@ export default {
     closeModal() {
       this.$emit("dialog-closed")
     },
+    closeTouchModal() {
+      this.$emit("restart-touch")
+    },
     handleEnterPressed() {
       this.$emit("enter-pressed")
     },
@@ -69,7 +76,6 @@ export default {
     display: flex;
     text-align: left;
     padding: 0 !important;
-    // border: 1px solid red;
 
     .v-btn {
       position: absolute;
@@ -122,6 +128,7 @@ export default {
     border: 1px solid green;
     height: 90vh !important;
     width: 100% !important;
+    touch-action: none;
   }
 }
 </style>

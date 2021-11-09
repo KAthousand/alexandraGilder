@@ -26,7 +26,11 @@
           ><h3>BOOK APPOINTMENT</h3></v-btn
         >
       </div>
-      <v-btn icon @click.stop="handleNavClick($event)" class="dash-nav-btn"
+      <v-btn
+        icon
+        @click.stop="handleNavClick($event)"
+        @touchstart="handleNavTouch($event)"
+        class="dash-nav-btn"
         ><v-icon class="close-icon" color="secondary"
           >highlight_off</v-icon
         ></v-btn
@@ -59,6 +63,9 @@ export default {
     },
     handleNavClick(value) {
       this.$emit("nav-click")
+    },
+    handleNavTouch(value) {
+      this.$emit("restart-touch")
     },
   },
 }

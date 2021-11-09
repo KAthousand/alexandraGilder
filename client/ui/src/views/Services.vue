@@ -22,6 +22,7 @@
                 : ' opacity: 0'
             "
             @click="handleClick(massage)"
+            @touchstart="handleTouch(massage)"
             >{{ massage.title }}</v-btn
           >
         </div>
@@ -34,6 +35,8 @@
         :currentMassage="currentMassage"
         :dialogTitle="currentMassage.title"
         @dialog-closed="closeModal()"
+        @touch-dialog-closed="touchCloseModal()"
+        @restart-touch="handleRestartTouch"
       >
         <template #title>
           <span class="dialog-title"> {{ currentMassage.title }}</span>
@@ -205,8 +208,23 @@ export default {
       this.open = true
       this.currentMassage = value
     },
+
+    handleTouch(value) {
+      this.open = true
+      this.currentMassage = value
+      this.$emit("cancel-touch")
+    },
+
     closeModal() {
       this.open = false
+    },
+
+    touchCloseModal() {
+      this.open = false
+      this.$emit("restart-touch")
+    },
+    handleRestartTouch() {
+      this.$emit("restart-touch")
     },
   },
 }
