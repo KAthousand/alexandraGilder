@@ -13,6 +13,7 @@
       :activeSection="activeSection"
       @route-click="handleRouteClick"
       @nav-click="handleNavClick"
+      @route-touch="handleRouteTouch"
     />
     <div class="layout-content" id="layout-cont" ref="layoutContent">
       <section class="fullpage" id="home" ref="home" style="margin-top: 0">
@@ -167,11 +168,25 @@ export default Vue.extend({
       const servicesBtm = services.getBoundingClientRect().bottom
       if (titleBtm > 350) {
         this.activeSection = 0
-      } else if (titleBtm < 350 && servicesBtm > 140) {
+      } else if (titleBtm < 350 && servicesBtm > 400) {
         this.activeSection = 1
-      } else if (servicesBtm < 200) {
+      } else if (servicesBtm < 400) {
+        console.log("2")
         this.activeSection = 2
       }
+    },
+
+    handleRouteTouch(value) {
+      this.activeSection = value
+      const layout = document.querySelector("#layout-cont")
+      const activeRef = this.anchors[value]
+      const el = this.$refs[activeRef]
+      const elTopPos = el.getBoundingClientRect().top
+      console.log(elTopPos)
+      layout.scrollBy({ top: elTopPos, behavior: "smooth" })
+      // const count = el.offsetTop - layout.scrollTop
+      // const ref = document.getElementsByTagName("section")[value]
+      // ref.scrollIntoView({ behavior: "smooth" })
     },
   },
 })
@@ -214,11 +229,12 @@ export default Vue.extend({
   }
 
   .layout-container {
-    overflow-y: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
   }
 
   .layout-content {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 100%;
     width: 100%;
   }

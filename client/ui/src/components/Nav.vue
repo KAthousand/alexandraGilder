@@ -11,7 +11,6 @@
         class="nav-menu"
         :class="{ active: activeSection == index }"
         @click="handleClick(index)"
-        @touchstart="handleClick(index)"
       >
         <h3>{{ anchor }}</h3>
       </v-btn>
@@ -23,11 +22,7 @@
         ><h3>BOOK APPOINTMENT</h3></v-btn
       >
     </div>
-    <v-btn
-      icon
-      @click.stop="handleNavClick($event)"
-      @touchstart="touchHandleNavClick($event)"
-      class="dash-nav-btn"
+    <v-btn icon @click.stop="handleNavClick($event)" class="dash-nav-btn"
       ><v-icon class="open-icon" color="secondary">menu</v-icon></v-btn
     >
   </div>
@@ -67,9 +62,6 @@ export default {
     },
     handleNavClick(value) {
       this.$emit("nav-click")
-    },
-    touchHandleNavClick(value) {
-      this.$emit("cancel-touch")
     },
   },
 }
