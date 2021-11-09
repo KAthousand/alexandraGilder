@@ -238,6 +238,10 @@ export default {
 
 .services-content {
   background-color: var(--background);
+  background-image: url("../assets/svgs/services.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 1.5rem !important;
   box-shadow: 0px 20px 38px -21px rgba(0, 0, 0, 0.46) !important;
   height: 100%;
@@ -485,7 +489,7 @@ export default {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .container {
     padding: 6vh 0 0 0;
   }
@@ -493,7 +497,11 @@ export default {
     border-radius: 0 !important;
     display: flex;
     flex-direction: column;
+    background-image: url("../assets/svgs/services2.svg");
   }
+}
+
+@media (max-width: 1000px) {
   .services-title {
     // border: 1px solid red;
     position: relative;
@@ -555,7 +563,7 @@ export default {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (max-height: 400px) and (max-width: 850px) {
   .container {
     padding: 6vh 0 0 0;
   }

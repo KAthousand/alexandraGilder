@@ -9,7 +9,7 @@
           <v-divider
             style="
               border-color: var(--dark);
-              width: 70%;
+              width: 30%;
               border-width: 2px;
               margin: 0 auto;
               height: 100%;
@@ -20,14 +20,25 @@
             <p>220 South Main St.</p>
             <p>Royal Oak, MI, 48067</p>
             <p>Inside Bamboo Royal Oak</p>
-            <v-btn class="view-map-btn" depressed>View on map</v-btn>
+            <v-btn
+              class="view-map-btn"
+              depressed
+              href="https://www.google.com/maps/place/220+S+Main+St,+Royal+Oak,+MI+48067/@42.4883099,-83.1460264,17z/data=!3m1!4b1!4m5!3m4!1s0x8824cf421efdc121:0x326e3e5dd161ab96!8m2!3d42.4883099!4d-83.1445882"
+              target="_blank"
+              >View on map</v-btn
+            >
           </v-card-text>
         </div>
+        <a
+          href="https://www.google.com/maps/place/220+S+Main+St,+Royal+Oak,+MI+48067/@42.4883099,-83.1460264,17z/data=!3m1!4b1!4m5!3m4!1s0x8824cf421efdc121:0x326e3e5dd161ab96!8m2!3d42.4883099!4d-83.1445882"
+          target="_blank"
+          class="location-img-container"
+        >
+          <div class="location-img">
+            <v-img class="photo" :src="mapPhoto"> </v-img></div
+        ></a>
 
-        <div class="location-img">
-          <v-img class="photo" :src="mapPhoto"></v-img>
-        </div>
-        <div class="info" style="padding: 0 4rem">
+        <div class="info" style="padding: 1rem 0; width: 90%">
           <v-card-title class="info-title d-flex flex-column">
             CONTACT
           </v-card-title>
@@ -42,7 +53,9 @@
             "
           ></v-divider>
           <v-card-text class="contact-info">
-            <div class="contact-phone"><h5>(248)613-8418</h5></div>
+            <div class="contact-phone">
+              <a href="sms:+12486138418"> <h5>(248)613-8418</h5></a>
+            </div>
             <div class="contact-email">
               <a class="info-link" href="mailto:lexandraga@gmail.com"
                 >lexandraga@gmail.com</a
@@ -61,20 +74,24 @@
           </v-card-text>
         </div>
       </div>
-      <div class="map-container">
-        <v-img class="map-photo" height="100%;" :src="map"></v-img>
-      </div>
+      <a
+        href="https://www.google.com/maps/place/220+S+Main+St,+Royal+Oak,+MI+48067/@42.4883099,-83.1460264,17z/data=!3m1!4b1!4m5!3m4!1s0x8824cf421efdc121:0x326e3e5dd161ab96!8m2!3d42.4883099!4d-83.1445882"
+        target="_blank"
+        class="map-container"
+      >
+        <v-img class="map-photo" height="100%" :src="map"></v-img>
+      </a>
     </v-card>
   </div>
 </template>
 
 <script>
-import mapPhoto from "../assets/img/mapphoto.png"
-import map from "../assets/img/map.png"
+import bamboo from "../assets/img/bamboooutside.webp"
+import map from "../assets/img/mapPhoto.png"
 export default {
   data: () => ({
     map: map,
-    mapPhoto: mapPhoto,
+    mapPhoto: bamboo,
   }),
 }
 </script>
@@ -91,6 +108,10 @@ export default {
   width: 100%;
   border-radius: 1.5rem !important;
   box-shadow: 0px 20px 38px -21px rgba(0, 0, 0, 0.46) !important;
+  background-image: url("../assets/svgs/info.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   .map-container {
     height: 100%;
@@ -123,7 +144,6 @@ export default {
   }
 
   .information-content {
-    background-color: var(--rainbow-yellow);
     border-radius: inherit;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
@@ -136,24 +156,31 @@ export default {
       margin-bottom: 0.5rem;
       font-size: 1.4rem;
       line-height: 1.8rem;
+      font-weight: 500;
     }
 
     .info {
-      background-color: transparent !important;
-      padding: 0 30%;
-      margin: 2.5rem 0;
+      background-color: var(--rainbow-yellow) !important;
+      width: 60%;
+      padding: 1rem 0;
+      margin: 2.5rem auto;
+
+      .info-title {
+        background-color: var(--rainbow-yellow);
+      }
 
       .location-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-color: var(--rainbow-yellow);
       }
 
       .view-map-btn {
         background-color: var(--dark);
         color: var(--rainbow-yellow);
         margin: 1rem auto 0 auto;
-        width: 80%;
+        width: 60%;
         font-size: 1.4rem;
       }
     }
@@ -187,6 +214,10 @@ export default {
     margin: 0 1rem;
   }
 
+  a {
+    color: var(--dark);
+    text-decoration: none;
+  }
   .contact-insta {
     background-image: url("../assets/svgs/prenatal.svg");
     background-repeat: no-repeat;
@@ -228,7 +259,16 @@ i {
   margin-bottom: 0 !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
+  .container {
+    padding: 6vh 0 0 0;
+  }
+  .information-card {
+    border-radius: 0px !important;
+  }
+}
+
+@media (max-width: 1000px) {
   .container {
     padding: 6vh 0 0 0;
   }
@@ -247,14 +287,12 @@ i {
   }
 
   .location-img {
-    height: 20% !important;
-    width: 90% !important;
-    margin-bottom: 3rem !important;
+    height: 38% !important;
   }
 
   .contact-info {
     justify-content: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     height: 100%;
     margin-top: 3rem !important;
   }
@@ -269,18 +307,62 @@ i {
   i {
     transform: scale(4.5);
   }
-
-  .info {
-    padding: 0 4rem !important;
-  }
 }
-@media (orientation: landscape) {
+
+// @media (max-width: 600px) {
+//   .container {
+//     padding: 6vh 0 0 0;
+//   }
+//   .information-card {
+//     border-radius: 0px !important;
+//     flex-direction: column;
+//   }
+//   .information-content {
+//     padding-top: 4rem;
+//     height: 100% !important;
+//     width: 100% !important;
+//   }
+//   .map-container {
+//     display: none;
+//     height: 0 !important;
+//   }
+
+//   .location-img {
+//     height: 20% !important;
+//     width: 90% !important;
+//     margin-bottom: 3rem !important;
+//   }
+
+//   .contact-info {
+//     justify-content: center;
+//     flex-wrap: wrap;
+//     height: 100%;
+//     margin-top: 3rem !important;
+//   }
+
+//   .contact-email,
+//   .contact-phone,
+//   .contact-insta {
+//     height: 10rem !important;
+//     width: 50% !important;
+//     margin: 0 0 1rem 0 !important;
+//   }
+//   i {
+//     transform: scale(4.5);
+//   }
+
+//   .info {
+//     padding: 0 4rem !important;
+//   }
+// }
+@media screen and (max-height: 400px) and (max-width: 850px) {
   .container {
     padding: 6vh 0 0 0;
   }
   .information-card {
     border-radius: 0px !important;
   }
+
   .information-content {
     padding-top: 4rem;
     height: 100% !important;

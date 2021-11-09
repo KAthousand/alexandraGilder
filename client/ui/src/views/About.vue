@@ -112,6 +112,10 @@ export default {
 }
 
 .about-content {
+  background-image: url("../assets/svgs/about.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 1.5rem !important;
   box-shadow: 0px 20px 38px -21px rgba(0, 0, 0, 0.46) !important;
   height: 100%;
@@ -183,12 +187,37 @@ export default {
   }
 }
 
+@media (max-width: 900px) {
+  .about-container {
+    padding: 0;
+  }
+  .about-title {
+    top: 8vh !important;
+  }
+  .about-text-content {
+    top: 40% !important;
+    left: auto !important;
+    right: 8% !important;
+    width: 40% !important;
+  }
+  .about-img-container {
+    height: 80%;
+    .about-img {
+      top: 20% !important;
+    }
+  }
+}
+
 @media (max-width: 600px) {
   .about-container {
     padding: 0;
   }
   .about-content {
     border-radius: 0 !important;
+    background-image: url("../assets/svgs/about2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .content {
@@ -234,7 +263,7 @@ export default {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (max-height: 400px) and (max-width: 850px) {
   .about-container {
     padding: 0;
   }
