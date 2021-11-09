@@ -214,15 +214,21 @@ export default Vue.extend({
 }
 
 @media (max-width: 600px) {
-  .layout-container {
-    border: 1px solid blue;
-    // overflow-y: hidden;
+  .fullpage {
+    height: 88vh;
   }
-  .layout-content {
-    border: 1px solid red;
-    // overflow-y: scroll;
-    // height: 100%;
-    // width: 100%;
+  #information {
+    height: 100vh;
   }
+  // .layout-container {
+  // border: 1px solid blue;
+  // overflow-y: hidden;
+  // }
+  // .layout-content {
+  // border: 1px solid red;
+  // overflow-y: scroll;
+  // height: 100%;
+  // width: 100%;
+  // }
 }
 </style>

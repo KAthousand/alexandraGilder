@@ -66,42 +66,42 @@ export default {
       .first-name {
         margin-right: 5rem;
       }
-
-      .first-name h1,
-      .last-name h1 {
-        animation: name-animation 0.75s forwards;
-        animation-delay: 0.75s;
-        opacity: 0;
-      }
     }
+  }
+}
 
-    @keyframes name-animation {
-      0% {
-        transform: translateY(10px);
-        opacity: 0;
-      }
-      50% {
-        transform: translateY(-8px);
-      }
+.first-name h1,
+.last-name h1 {
+  animation: name-animation 0.75s forwards;
+  animation-delay: 0.75s;
+  opacity: 0;
+}
 
-      100% {
-        transform: translateY(0);
-        opacity: 100;
-      }
-    }
+.subtitle {
+  color: var(--light);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: name-animation 0.75s forwards;
+  animation-delay: 3s;
+  display: flex;
+  justify-content: center;
+  margin-top: -1rem;
+}
 
-    .subtitle {
-      color: var(--light);
-      font-size: 1.6rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-      opacity: 0;
-      animation: name-animation 0.75s forwards;
-      animation-delay: 3s;
-      display: flex;
-      justify-content: center;
-      margin-top: -1rem;
-    }
+@keyframes name-animation {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 100;
   }
 }
 // /* media qs ----------------------- */
