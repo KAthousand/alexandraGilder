@@ -14,7 +14,13 @@
       >
         <h3>{{ anchor }}</h3>
       </v-btn>
-      <v-btn class="nav-menu" text href="https://squareup.com/appointments/book/u7lab3kdl18r47/L6X4E0YVBM4WG/services" target="_blank"><h3>BOOK APPOINTMENT</h3></v-btn>
+      <v-btn
+        class="nav-menu"
+        text
+        href="https://squareup.com/appointments/book/u7lab3kdl18r47/L6X4E0YVBM4WG/services"
+        target="_blank"
+        ><h3>BOOK APPOINTMENT</h3></v-btn
+      >
     </div>
     <v-btn icon @click.stop="handleNavClick($event)" class="dash-nav-btn"
       ><v-icon class="open-icon" color="secondary">menu</v-icon></v-btn

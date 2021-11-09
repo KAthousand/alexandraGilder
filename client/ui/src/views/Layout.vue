@@ -61,7 +61,7 @@ export default Vue.extend({
     window.addEventListener("mousewheel", this.handleMouseWheel, {
       passive: false,
     }) // chrome + other browsers
-    // window.addEventListener("touchstart", this.touchStart, { passive: false }) // mobile devices
+    window.addEventListener("touchstart", this.touchStart, { passive: false }) // mobile devices
     window.addEventListener("touchmove", this.touchMove, { passive: false }) // mobile devices
   },
   destroyed() {
@@ -70,7 +70,7 @@ export default Vue.extend({
     }) // chrome + other browsers
     window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM) // Mozilla Firefox
 
-    // window.removeEventListener("touchstart", this.touchStart) // mobile devices
+    window.removeEventListener("touchstart", this.touchStart) // mobile devices
     window.removeEventListener("touchmove", this.touchMove) // mobile devices
   },
   methods: {
@@ -112,11 +112,15 @@ export default Vue.extend({
       e.preventDefault()
 
       const currentY = e.touches[0].clientY
+      console.log("Touch Start", this.touchStartY)
+      console.log(currentY)
 
       if (this.touchStartY < currentY) {
         this.movePrevious()
+        console.log("MOVE PREVIOUS")
       } else {
         this.moveNext()
+        console.log("MOVE NEXT")
       }
 
       this.touchStartY = 0
@@ -158,6 +162,10 @@ export default Vue.extend({
         this.inMove = false
       }, 500)
     },
+
+    // handleMobile(){
+    //   const title =
+    // }
   },
 })
 </script>
@@ -185,5 +193,18 @@ export default Vue.extend({
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 600px) {
+  .layout-container {
+    border: 1px solid blue;
+    // overflow-y: hidden;
+  }
+  .layout-content {
+    border: 1px solid red;
+    // overflow-y: scroll;
+    // height: 100%;
+    // width: 100%;
+  }
 }
 </style>

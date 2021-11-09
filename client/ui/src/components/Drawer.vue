@@ -1,5 +1,5 @@
 <template>
-  <div class="dash-nav-container">
+  <div class="dash-nav-container" :class="open ? 'tall-dash-nav' : ''">
     <v-navigation-drawer
       absolute
       temporary
@@ -123,10 +123,22 @@ export default {
 @media (max-width: 600px) {
   .dash-nav-container {
     position: absolute;
+    height: 7vh;
+    width: 100%;
     display: flex !important;
     justify-content: center;
     align-items: center;
+    transition: 0.25s;
   }
+
+  .tall-dash-nav {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .dash-nav-btn {
     display: block;
     position: absolute;
