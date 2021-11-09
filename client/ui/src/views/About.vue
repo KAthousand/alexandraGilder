@@ -258,7 +258,7 @@ export default {
   .about-text-content {
     top: 50% !important;
     left: auto !important;
-    right: 15%;
+    right: 15% !important;
     width: 70% !important;
   }
 }

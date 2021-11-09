@@ -357,14 +357,14 @@ i {
 // }
 @media screen and (max-height: 400px) and (max-width: 850px) {
   .container {
-    padding: 6vh 0 0 0;
+    padding: 3vh 0 0 0;
   }
   .information-card {
     border-radius: 0px !important;
   }
 
   .information-content {
-    padding-top: 4rem;
+    // padding-top: 4rem;
     height: 100% !important;
     width: 100% !important;
     display: flex;
@@ -380,14 +380,17 @@ i {
   .contact-info {
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0 !important;
+    height: 80%;
   }
 
   .contact-email,
   .contact-phone,
   .contact-insta {
     height: 10rem !important;
-    width: 50% !important;
-    margin: 0 0 1rem 0 !important;
+    width: 45% !important;
+    margin: 0 !important;
+    // margin: 0 0 1rem 0 !important;
   }
   i {
     transform: scale(4.5);

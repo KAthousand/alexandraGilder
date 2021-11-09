@@ -136,11 +136,13 @@ export default {
 @media (max-width: 600px) {
   .name {
     flex-direction: column;
-    font-size: 3rem !important;
-    line-height: 7rem;
     text-align: center;
     justify-content: center;
     align-items: center;
+    h1 {
+      font-size: 8rem !important;
+      line-height: 7rem;
+    }
   }
   .first-name {
     margin: 0 !important;
