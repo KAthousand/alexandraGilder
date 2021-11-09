@@ -214,12 +214,10 @@ export default Vue.extend({
   }
 
   .layout-container {
-    border: 1px solid blue;
     overflow-y: hidden;
   }
 
   .layout-content {
-    border: 1px solid red;
     overflow-y: scroll;
     height: 100%;
     width: 100%;
