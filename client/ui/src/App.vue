@@ -23,4 +23,8 @@ export default Vue.extend({
 * {
   box-sizing: border-box;
 }
+
+.v-application--wrap {
+  -webkit-perspective: 1000;
+}
 </style>

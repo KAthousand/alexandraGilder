@@ -55,8 +55,8 @@ export default Vue.extend({
     window.addEventListener("mousewheel", this.handleMouseWheel, {
       passive: false,
     }) // chrome + other browsers
-    // window.addEventListener("touchstart", this.touchStart, { passive: false }) // mobile devices
-    // window.addEventListener("touchmove", this.touchMove, { passive: false }) // mobile devices
+    window.addEventListener("touchstart", this.touchStart, { passive: false }) // mobile devices
+    window.addEventListener("touchmove", this.touchMove, { passive: false }) // mobile devices
   },
   destroyed() {
     window.removeEventListener("mousewheel", this.handleMouseWheel, {
@@ -64,8 +64,8 @@ export default Vue.extend({
     }) // chrome + other browsers
     window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM) // Mozilla Firefox
 
-    // window.removeEventListener("touchstart", this.touchStart) // mobile devices
-    // window.removeEventListener("touchmove", this.touchMove) // mobile devices
+    window.removeEventListener("touchstart", this.touchStart) // mobile devices
+    window.removeEventListener("touchmove", this.touchMove) // mobile devices
   },
   methods: {
     handleNavClick() {
