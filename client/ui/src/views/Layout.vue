@@ -15,7 +15,7 @@
       @nav-click="handleNavClick"
     />
     <div class="layout-content" id="layout-cont" ref="layoutContent">
-      <section class="fullpage" id="home" ref="home">
+      <section class="fullpage" id="home" ref="home" style="margin-top: 0">
         <Title :active-section="activeSection" />
       </section>
       <section class="fullpage" id="services" ref="services">
@@ -169,7 +169,7 @@ export default Vue.extend({
         this.activeSection = 0
       } else if (titleBtm < 350 && servicesBtm > 140) {
         this.activeSection = 1
-      } else if (servicesBtm < 170) {
+      } else if (servicesBtm < 200) {
         this.activeSection = 2
       }
     },

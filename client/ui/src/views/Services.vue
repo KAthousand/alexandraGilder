@@ -256,6 +256,7 @@ export default {
   font-size: 3.2rem;
   font-weight: bold;
   letter-spacing: 2px;
+  opacity: 0;
   color: var(--dark);
 }
 

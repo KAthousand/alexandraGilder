@@ -135,11 +135,11 @@ export default {
       left: 20%;
       z-index: 4;
       width: 90%;
+      opacity: 0;
     }
   }
 
   .about-text {
-    // border: 2px solid green;
     height: 100%;
     width: 50%;
 
@@ -150,7 +150,7 @@ export default {
       color: var(--light);
       animation: name-animation 0.75s forwards;
       // animation-delay: 0.5s;
-      // opacity: 0;
+
       z-index: 4;
 
       h2 {
@@ -159,6 +159,7 @@ export default {
         font-weight: 600;
         letter-spacing: 1rem;
         line-height: 8rem;
+        opacity: 0;
       }
     }
 
