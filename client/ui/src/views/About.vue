@@ -130,7 +130,6 @@ export default {
     .about-img {
       border-radius: 0.8rem;
       position: absolute;
-      filter: blur(0.05rem);
       top: 10%;
       left: 20%;
       z-index: 4;

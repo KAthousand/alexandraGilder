@@ -166,6 +166,7 @@ export default Vue.extend({
       const titleBtm = title.getBoundingClientRect().bottom
       const services = this.$refs.services
       const servicesBtm = services.getBoundingClientRect().bottom
+      console.log(titleBtm)
       if (titleBtm > 350) {
         this.activeSection = 0
       } else if (titleBtm < 350 && servicesBtm > 400) {

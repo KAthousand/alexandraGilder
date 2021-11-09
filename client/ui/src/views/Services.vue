@@ -34,19 +34,13 @@
         :currentMassage="currentMassage"
         :dialogTitle="currentMassage.title"
         @dialog-closed="closeModal()"
-        @restart-touch="handleRestartTouch"
       >
         <template #title>
           <span class="dialog-title"> {{ currentMassage.title }}</span>
         </template>
         <template #content>
           <div class="dialog-content">
-            <v-img
-              height="50%"
-              class="dialog-img"
-              :src="currentMassage.img"
-              :lazy-src="currentMassage.lazySrc"
-            >
+            <v-img height="50%" class="dialog-img" :src="currentMassage.img">
               <template v-slot:placeholder>
                 <v-row class="fill-height ma-0" align="center" justify="center">
                   <v-progress-circular
@@ -96,7 +90,6 @@ import guasha from "../assets/img/guasha.png"
 import moxa from "../assets/img/moxa.png"
 import prenatal from "../assets/img/prenatal.png"
 import swedish from "../assets/img/swedish.png"
-import lazy from "../assets/img/aleahia-handsml.png"
 
 export default {
   components: { CommonDialog },
@@ -121,7 +114,6 @@ export default {
         price2: "$100 per 90min session",
         addon: "~add deep tissue for $20~",
         class: "swedish",
-        lazySrc: lazy,
       },
       {
         title: "hot stone massage",
@@ -131,7 +123,6 @@ export default {
         price2: "$120 per 90 min session",
         addon: "",
         class: "hot-stone",
-        lazySrc: lazy,
       },
       {
         title: "raindrop technique",
@@ -142,7 +133,6 @@ export default {
         price2: "",
         addon: "",
         class: "raindrop",
-        lazySrc: lazy,
       },
       {
         title: "prenatal massage",
@@ -153,7 +143,6 @@ export default {
         price2: "$90 per 90 min session",
         addon: "",
         class: "prenatal",
-        lazySrc: lazy,
       },
       {
         title: "cupping",
@@ -174,7 +163,6 @@ export default {
         price2: "",
         addon: "",
         class: "moxa",
-        lazySrc: lazy,
       },
       {
         title: "gua sha",
@@ -185,7 +173,6 @@ export default {
         price2: "",
         addon: "",
         class: "gua-sha",
-        lazySrc: lazy,
       },
       // {
       //   title: "infrared",
@@ -216,7 +203,6 @@ export default {
         price2: "",
         addon: "",
         class: "cbd",
-        lazySrc: lazy,
       },
     ],
   }),
@@ -225,24 +211,9 @@ export default {
       this.open = true
       this.currentMassage = value
     },
-
-    handleTouch(value) {
-      this.open = true
-      this.currentMassage = value
-      this.$emit("cancel-touch")
-    },
-
     closeModal() {
       this.open = false
     },
-
-    // touchCloseModal() {
-    //   this.open = false
-    //   this.$emit("restart-touch")
-    // },
-    // handleRestartTouch() {
-    //   this.$emit("restart-touch")
-    // },
   },
 }
 </script>
@@ -600,6 +571,26 @@ export default {
     }
     .moxa {
       margin-right: 2rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .dialog-text-container {
+    .dialog-text {
+      justify-content: center !important;
+      p {
+        margin-bottom: 0;
+        font-size: 1.8rem !important;
+        letter-spacing: 0.8;
+        line-height: 2.2rem;
+      }
+
+      h6 {
+        font-size: 1.4rem !important;
+        font-weight: 600 !important;
+        padding: 4px !important;
+      }
     }
   }
 }
