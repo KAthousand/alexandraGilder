@@ -59,6 +59,7 @@ export default Vue.extend({
   }),
   created() {
     window.addEventListener("touchmove", this.handleMobileScroll)
+    window.addEventListener("scroll", this.handleMobileScroll)
     window.addEventListener("DOMMouseScroll", this.handleMouseWheelDOM) // Mozilla Firefox
     window.addEventListener("mousewheel", this.handleMouseWheel, {
       passive: false,
@@ -68,6 +69,7 @@ export default Vue.extend({
   },
   destroyed() {
     window.removeEventListener("touchmove", this.handleMobileScroll)
+    window.removeEventListener("scroll", this.handleMobileScroll)
     window.removeEventListener("mousewheel", this.handleMouseWheel, {
       passive: false,
     }) // chrome + other browsers
@@ -220,7 +222,7 @@ export default Vue.extend({
   width: 100vw;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;
+  // -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
@@ -249,10 +251,12 @@ export default Vue.extend({
   .layout-container {
     overflow-y: scroll;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
 
   .layout-content {
     overflow-y: auto;
+    -webkit-overflow-scrolling: auto;
     height: 100%;
     width: 100%;
   }
