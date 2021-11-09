@@ -87,7 +87,7 @@
 
 <script>
 import bamboo from "../assets/img/bamboooutside.webp"
-import map from "../assets/img/mapPhoto.png"
+import map from "../assets/img/mapphoto.png"
 export default {
   data: () => ({
     map: map,
