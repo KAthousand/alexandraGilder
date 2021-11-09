@@ -3,22 +3,24 @@
     <div class="title-content">
       <div class="name">
         <div class="first-name d-flex">
-          <h1
+          <div
             v-for="(letter, index) in firstname"
             :key="index"
+            class="firstname-container"
             :style="'animation-delay: ' + (index + 4) * 125 + 'ms'"
           >
-            {{ letter }}
-          </h1>
+            <h1>{{ letter }}</h1>
+          </div>
         </div>
         <div class="last-name d-flex">
-          <h1
+          <div
             v-for="(letter, index) in lastname"
             :key="index"
+            class="firstname-container"
             :style="'animation-delay: ' + (index + 14) * 125 + 'ms'"
           >
-            {{ letter }}
-          </h1>
+            <h1>{{ letter }}</h1>
+          </div>
         </div>
       </div>
       <div class="subtitle">
@@ -70,10 +72,9 @@ export default {
   }
 }
 
-.first-name h1,
-.last-name h1 {
+.firstname-container {
+  display: block;
   animation: name-animation 0.75s forwards;
-  // animation-delay: 0.75s;
   opacity: 0;
 }
 
@@ -85,25 +86,12 @@ export default {
   opacity: 0;
   animation: name-animation 0.75s forwards;
   animation-delay: 3s;
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
+  // justify-content: center;
   margin-top: -1rem;
 }
 
-@keyframes name-animation {
-  0% {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 100;
-  }
-}
 // /* media qs ----------------------- */
 @media (max-width: 1330px) {
   .name {
