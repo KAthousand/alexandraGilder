@@ -58,7 +58,14 @@
               </div>
             </v-card-text>
             <v-card-actions class="btn-container">
-              <v-btn class="book-btn" dark depressed>Book now</v-btn>
+              <v-btn
+                class="book-btn"
+                dark
+                depressed
+                href="https://squareup.com/appointments/book/u7lab3kdl18r47/L6X4E0YVBM4WG/services"
+                target="_blank"
+                >Book now</v-btn
+              >
             </v-card-actions>
           </div>
         </template>
