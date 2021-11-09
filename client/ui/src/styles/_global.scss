@@ -1,0 +1,54 @@
+:root {
+  font-size: 10px;
+  color: var(--darker);
+}
+
+.v-application {
+  font-family: var(--font-body) !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: var(--font-display-bold);
+}
+
+p {
+  font-family: var(--font-body);
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 8px;
+  }
+}
