@@ -9,7 +9,7 @@
             class="firstname-container"
             :style="'animation-delay: ' + (index + 4) * 125 + 'ms'"
           >
-            <h1>{{ letter }}</h1>
+            <h1 style="display: block">{{ letter }}</h1>
           </div>
         </div>
         <div class="last-name d-flex">
@@ -19,7 +19,7 @@
             class="firstname-container"
             :style="'animation-delay: ' + (index + 14) * 125 + 'ms'"
           >
-            <h1>{{ letter }}</h1>
+            <h1 style="display: block">{{ letter }}</h1>
           </div>
         </div>
       </div>
