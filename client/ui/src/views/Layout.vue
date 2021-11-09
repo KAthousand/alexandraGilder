@@ -1,11 +1,5 @@
 <template>
-  <div
-    class="layout-container"
-    id="layout"
-    @wheel.prevent
-    @touchmove.prevent
-    @scroll.prevent
-  >
+  <div class="layout-container" id="layout" @wheel.prevent @scroll.prevent>
     <Nav
       style="position: absolute"
       :anchors="anchors"
@@ -62,7 +56,7 @@ export default Vue.extend({
       passive: false,
     }) // chrome + other browsers
     // window.addEventListener("touchstart", this.touchStart, { passive: false }) // mobile devices
-    window.addEventListener("touchmove", this.touchMove, { passive: false }) // mobile devices
+    // window.addEventListener("touchmove", this.touchMove, { passive: false }) // mobile devices
   },
   destroyed() {
     window.removeEventListener("mousewheel", this.handleMouseWheel, {
@@ -71,7 +65,7 @@ export default Vue.extend({
     window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM) // Mozilla Firefox
 
     // window.removeEventListener("touchstart", this.touchStart) // mobile devices
-    window.removeEventListener("touchmove", this.touchMove) // mobile devices
+    // window.removeEventListener("touchmove", this.touchMove) // mobile devices
   },
   methods: {
     handleNavClick() {
