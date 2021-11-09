@@ -1,18 +1,11 @@
 <template>
-  <div
-    class="layout-container"
-    id="layout"
-    @wheel.prevent
-    @scroll.prevent
-    @touchmove.prevent
-  >
+  <div class="layout-container" id="layout" @wheel.prevent @scroll.prevent>
     <Nav
       style="position: absolute"
       :anchors="anchors"
       :activeSection="activeSection"
       @route-click="handleRouteClick"
       @nav-click="handleNavClick"
-      @cancel-touch="handleCancelTouch"
     />
     <Drawer
       :open="open"
@@ -20,19 +13,13 @@
       :activeSection="activeSection"
       @route-click="handleRouteClick"
       @nav-click="handleNavClick"
-      @cancel-touch="handleCancelTouch"
-      @restart-touch="handleRestartTouch"
     />
-    <div class="layout-content">
+    <div class="layout-content" id="layout-cont" ref="layoutContent">
       <section class="fullpage" id="home" ref="home">
-        <Title />
+        <Title :active-section="activeSection" />
       </section>
       <section class="fullpage" id="services" ref="services">
-        <Services
-          :activeSection="activeSection"
-          @cancel-touch="handleCancelTouch"
-          @restart-touch="handleRestartTouch"
-        />
+        <Services :activeSection="activeSection" />
       </section>
       <section class="fullpage" id="about" ref="about">
         <About :activeSection="activeSection" />
@@ -64,21 +51,23 @@ export default Vue.extend({
     anchors: ["home", "services", "about", "information"],
   }),
   created() {
+    window.addEventListener("touchmove", this.handleMobileScroll)
     window.addEventListener("DOMMouseScroll", this.handleMouseWheelDOM) // Mozilla Firefox
     window.addEventListener("mousewheel", this.handleMouseWheel, {
       passive: false,
     }) // chrome + other browsers
-    window.addEventListener("touchstart", this.touchStart, { passive: false }) // mobile devices
-    window.addEventListener("touchmove", this.touchMove, { passive: false }) // mobile devices
+    // window.addEventListener("touchstart", this.touchStart, { passive: false }) // mobile devices
+    // window.addEventListener("touchmove", this.touchMove, { passive: false }) // mobile devices
   },
   destroyed() {
+    window.removeEventListener("touchmove", this.handleMobileScroll)
     window.removeEventListener("mousewheel", this.handleMouseWheel, {
       passive: false,
     }) // chrome + other browsers
     window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM) // Mozilla Firefox
 
-    window.removeEventListener("touchstart", this.touchStart) // mobile devices
-    window.removeEventListener("touchmove", this.touchMove) // mobile devices
+    // window.removeEventListener("touchstart", this.touchStart) // mobile devices
+    // window.removeEventListener("touchmove", this.touchMove) // mobile devices
   },
   methods: {
     handleNavClick() {
@@ -109,31 +98,31 @@ export default Vue.extend({
       }
     },
 
-    touchStart(e) {
-      // e.preventDefault()
-      this.touchStartY = e.touches[0].clientY
-      console.log("touch")
-    },
+    // touchStart(e) {
+    //   // e.preventDefault()
+    //   this.touchStartY = e.touches[0].clientY
+    //   console.log("touch")
+    // },
 
-    touchMove(e) {
-      if (this.inMove) return false
-      e.preventDefault()
+    // touchMove(e) {
+    //   if (this.inMove) return false
+    //   e.preventDefault()
 
-      const currentY = e.touches[0].clientY
-      console.log("Touch Start", this.touchStartY)
-      console.log(currentY)
+    //   const currentY = e.touches[0].clientY
+    //   console.log("Touch Start", this.touchStartY)
+    //   console.log(currentY)
 
-      if (this.touchStartY < currentY) {
-        this.movePrevious()
-        console.log("MOVE PREVIOUS")
-      } else {
-        this.moveNext()
-        console.log("MOVE NEXT")
-      }
+    //   if (this.touchStartY < currentY) {
+    //     this.movePrevious()
+    //     console.log("MOVE PREVIOUS")
+    //   } else {
+    //     this.moveNext()
+    //     console.log("MOVE NEXT")
+    //   }
 
-      this.touchStartY = 0
-      return false
-    },
+    //   this.touchStartY = 0
+    //   return false
+    // },
 
     moveNext() {
       this.inMove = true
@@ -171,17 +160,18 @@ export default Vue.extend({
       }, 500)
     },
 
-    handleCancelTouch() {
-      console.log("cancel")
-      window.removeEventListener("touchstart", this.touchStart)
-      window.removeEventListener("touchmove", this.touchMove)
-      document.body.classList.add("fixed")
-    },
-    handleRestartTouch() {
-      console.log("restart")
-      window.addEventListener("touchstart", this.touchStart)
-      window.addEventListener("touchmove", this.touchMove)
-      document.body.classList.remove("fixed")
+    handleMobileScroll(value) {
+      const title = this.$refs.home
+      const titleBtm = title.getBoundingClientRect().bottom
+      const services = this.$refs.services
+      const servicesBtm = services.getBoundingClientRect().bottom
+      if (titleBtm > 350) {
+        this.activeSection = 0
+      } else if (titleBtm < 350 && servicesBtm > 140) {
+        this.activeSection = 1
+      } else if (servicesBtm < 170) {
+        this.activeSection = 2
+      }
     },
   },
 })
@@ -196,9 +186,9 @@ export default Vue.extend({
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  touch-action: none;
 }
 
 .layout-container::-webkit-scrollbar {
@@ -216,19 +206,23 @@ export default Vue.extend({
 @media (max-width: 600px) {
   .fullpage {
     height: 88vh;
+    // display: block;
+    margin: 10vh 0;
   }
   #information {
     height: 100vh;
   }
-  // .layout-container {
-  // border: 1px solid blue;
-  // overflow-y: hidden;
-  // }
-  // .layout-content {
-  // border: 1px solid red;
-  // overflow-y: scroll;
-  // height: 100%;
-  // width: 100%;
-  // }
+
+  .layout-container {
+    border: 1px solid blue;
+    overflow-y: hidden;
+  }
+
+  .layout-content {
+    border: 1px solid red;
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+  }
 }
 </style>
