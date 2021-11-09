@@ -110,7 +110,7 @@ export default Vue.extend({
     },
 
     touchStart(e) {
-      e.preventDefault()
+      // e.preventDefault()
       this.touchStartY = e.touches[0].clientY
       console.log("touch")
     },
@@ -198,6 +198,7 @@ export default Vue.extend({
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  touch-action: none;
 }
 
 .layout-container::-webkit-scrollbar {
