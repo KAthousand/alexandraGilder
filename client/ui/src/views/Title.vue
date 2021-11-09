@@ -73,7 +73,7 @@ export default {
 .first-name h1,
 .last-name h1 {
   animation: name-animation 0.75s forwards;
-  animation-delay: 0.75s;
+  // animation-delay: 0.75s;
   opacity: 0;
 }
 

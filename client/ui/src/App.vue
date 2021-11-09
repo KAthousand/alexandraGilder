@@ -28,6 +28,21 @@ export default Vue.extend({
   position: fixed;
 }
 
+@keyframes name-animation {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 100;
+  }
+}
+
 .v-application--wrap {
   -webkit-perspective: 1000;
 }
