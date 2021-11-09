@@ -510,7 +510,6 @@ export default {
 
 @media (max-width: 1000px) {
   .services-title {
-    // border: 1px solid red;
     position: relative;
     top: 0;
     left: 0;

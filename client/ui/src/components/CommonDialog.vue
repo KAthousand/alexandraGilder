@@ -112,4 +112,16 @@ export default {
   padding: 5.5rem 4rem;
   color: var(--text);
 }
+
+@media (max-width: 600px) {
+  .v-dialog__content {
+    height: 100vh !important;
+    width: 100vw !important;
+  }
+  .dialog-card {
+    border: 1px solid green;
+    height: 90vh !important;
+    width: 100% !important;
+  }
+}
 </style>

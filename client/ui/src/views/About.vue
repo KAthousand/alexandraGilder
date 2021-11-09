@@ -124,7 +124,6 @@ export default {
   background-color: var(--rainbow-grey-blue) !important;
 
   .about-img-container {
-    // border: 1px solid purple;
     width: 50%;
     position: relative;
 

@@ -61,7 +61,7 @@ export default Vue.extend({
     window.addEventListener("mousewheel", this.handleMouseWheel, {
       passive: false,
     }) // chrome + other browsers
-    window.addEventListener("touchstart", this.touchStart, { passive: false }) // mobile devices
+    // window.addEventListener("touchstart", this.touchStart, { passive: false }) // mobile devices
     window.addEventListener("touchmove", this.touchMove, { passive: false }) // mobile devices
   },
   destroyed() {
@@ -70,7 +70,7 @@ export default Vue.extend({
     }) // chrome + other browsers
     window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM) // Mozilla Firefox
 
-    window.removeEventListener("touchstart", this.touchStart) // mobile devices
+    // window.removeEventListener("touchstart", this.touchStart) // mobile devices
     window.removeEventListener("touchmove", this.touchMove) // mobile devices
   },
   methods: {
@@ -165,7 +165,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .layout-container {
   background: url("../assets/rainbow-background.png");
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -186,9 +186,4 @@ export default Vue.extend({
   justify-content: center;
   align-items: center;
 }
-
-// @media (max-width: 600px) {
-//   .fullpage {
-//   }
-// }
 </style>
