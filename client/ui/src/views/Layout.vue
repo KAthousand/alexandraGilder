@@ -208,7 +208,7 @@ export default Vue.extend({
 @media (max-width: 600px) {
   .fullpage {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     // display: block;
     margin: 10vh 0;
   }
