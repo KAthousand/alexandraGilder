@@ -577,6 +577,7 @@ export default {
 @media (max-width: 600px) {
   .services-title {
     opacity: 1;
+    margin-top: 4vh;
   }
   .service-btn {
     opacity: 1 !important;

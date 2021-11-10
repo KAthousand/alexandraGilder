@@ -207,21 +207,25 @@ export default Vue.extend({
 
 @media (max-width: 600px) {
   .fullpage {
-    height: 88vh;
+    width: 100vw;
+    height: 100vh;
     // display: block;
     margin: 10vh 0;
   }
   #information {
     height: 100vh;
+    margin-bottom: 0;
   }
 
   .layout-container {
+    overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
 
   .layout-content {
+    overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: auto;
     height: 100%;

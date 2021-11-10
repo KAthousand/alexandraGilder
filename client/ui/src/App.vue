@@ -24,6 +24,11 @@ export default Vue.extend({
   box-sizing: border-box;
 }
 
+#app {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .fixed {
   position: fixed;
 }
