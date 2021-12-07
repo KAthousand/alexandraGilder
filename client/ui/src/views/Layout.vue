@@ -31,9 +31,9 @@
       <section class="fullpage" id="about" ref="about">
         <About :activeSection="activeSection" />
       </section>
-      <section class="fullpage" id="information" ref="information">
+      <!-- <section class="fullpage" id="information" ref="information">
         <Information :activeSection="activeSection" />
-      </section>
+      </section> -->
     </div>
   </div>
 </template>
@@ -55,7 +55,7 @@ export default Vue.extend({
     activeSection: 0,
     offsets: [],
     touchStartY: 0,
-    anchors: ["home", "services", "about", "information"],
+    anchors: ["home", "services", "about"],
     layoutScrollTop: 0,
   }),
   created() {
@@ -206,6 +206,34 @@ export default Vue.extend({
 }
 
 @media (max-width: 600px) {
+  .fullpage {
+    width: 100vw;
+    height: 90vh;
+    // display: block;
+    margin: 10vh 0;
+  }
+  #information {
+    height: 100vh;
+    margin-bottom: 0;
+  }
+
+  .layout-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .layout-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: auto;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-height: 400px) and (max-width: 850px) {
   .fullpage {
     width: 100vw;
     height: 90vh;

@@ -578,6 +578,7 @@ export default {
   .services-title {
     opacity: 1;
     margin-top: 4vh;
+    transition: none !important;
   }
   .service-btn {
     opacity: 1 !important;
@@ -603,8 +604,17 @@ export default {
 }
 
 @media screen and (max-height: 400px) and (max-width: 850px) {
+  .services-title {
+    opacity: 1;
+    margin-top: 4vh;
+    transition: none !important;
+  }
+  .service-btn {
+    opacity: 1 !important;
+  }
+
   .container {
-    padding: 6vh 0 0 0;
+    padding: 2vh 0 0 0;
   }
   .services-content {
     border-radius: 0 !important;
@@ -618,6 +628,7 @@ export default {
     margin: 4rem 0 0 0;
     height: 5rem;
     width: 100%;
+    transition: none !important;
   }
   .service-btn-container {
     display: flex;

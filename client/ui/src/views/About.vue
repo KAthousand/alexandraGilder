@@ -51,6 +51,26 @@
               routine to manage stress and tension contact by phone to schedule.
             </p>
           </div>
+          <v-card-text class="contact-info">
+            <div class="contact-phone">
+              <a href="sms:+12486138418"> <h5>(248)613-8418</h5></a>
+            </div>
+            <div class="contact-email">
+              <a class="info-link" href="mailto:lexandraga@gmail.com"
+                >lexandraga@gmail.com</a
+              >
+            </div>
+            <div class="contact-insta">
+              <a
+                href="http://www.instagram.com/chillbabes"
+                target="_blank"
+                rel="noreferrer"
+                class="info-link"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </v-card-text>
         </v-card-text>
       </div>
     </v-card>
@@ -184,6 +204,70 @@ export default {
   }
 }
 
+.contact-info {
+  height: 10rem;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 2%;
+  width: 80rem;
+  z-index: 5;
+  left: 10%;
+
+  .contact-email,
+  .contact-phone,
+  .contact-insta {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0 1rem;
+  }
+
+  a {
+    color: var(--dark);
+    text-decoration: none;
+  }
+  .contact-insta {
+    background-image: url("../assets/svgs/deeptissue.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .contact-email {
+    background-image: url("../assets/svgs/raindrop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    a {
+      padding: 0 1rem !important;
+    }
+  }
+
+  .contact-phone {
+    background-image: url("../assets/svgs/cryo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+i {
+  width: 100%;
+  text-align: center;
+  transform: scale(3.5);
+  color: var(--dark);
+  transition: 0.5s;
+}
+
 @media (max-width: 900px) {
   .about-container {
     padding: 0;
@@ -241,6 +325,7 @@ export default {
     width: 100% !important;
   }
   .about-title {
+    transition: none !important;
     width: 100%;
     top: 7vh !important;
     left: -1rem;
@@ -260,6 +345,11 @@ export default {
     right: 15% !important;
     width: 70% !important;
   }
+
+  .contact-info {
+    left: 2% !important;
+    width: 96%;
+  }
 }
 
 @media screen and (max-height: 400px) and (max-width: 850px) {
@@ -278,6 +368,7 @@ export default {
       border-radius: 0.8rem;
       position: absolute;
       filter: blur(0.05rem);
+      opacity: 1 !important;
       top: 35% !important;
       left: auto !important;
       right: 25%;
@@ -290,11 +381,14 @@ export default {
     width: 100% !important;
   }
   .about-title {
+    transition: none !important;
+    transform: translateY(-20px) !important;
     width: 100%;
     top: 8vh !important;
     left: 2rem;
     h2 {
       font-size: 6.5rem !important;
+      opacity: 1 !important;
       font-family: var(--font-display);
       font-weight: 600;
       letter-spacing: 0.8rem !important;
@@ -302,6 +396,8 @@ export default {
     }
   }
   .about-text-content {
+    transform: translateY(-15px) !important;
+    opacity: 1 !important;
     top: 35% !important;
     left: auto !important;
     right: 2%;
@@ -310,6 +406,12 @@ export default {
     p {
       font-size: 1.2rem !important;
     }
+  }
+
+  .contact-info {
+    top: 2%;
+    left: 44% !important;
+    width: 56%;
   }
 }
 </style>

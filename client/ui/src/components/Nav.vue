@@ -132,6 +132,7 @@ export default {
 @media (max-width: 600px) {
   .nav-container {
     height: 10vh;
+    background-color: transparent !important;
   }
 
   .tabs-container {
@@ -153,6 +154,7 @@ export default {
 @media screen and (max-height: 400px) and (max-width: 850px) {
   .nav-container {
     height: 15vh;
+    background-color: transparent !important;
   }
 
   .tabs-container {
