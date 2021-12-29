@@ -273,10 +273,12 @@ i {
     padding: 0;
   }
   .about-title {
+    width: 75%;
     top: 8vh !important;
+    right: 20% !important;
   }
   .about-text-content {
-    top: 40% !important;
+    top: 35% !important;
     left: auto !important;
     right: 8% !important;
     width: 40% !important;
@@ -286,6 +288,9 @@ i {
     .about-img {
       top: 20% !important;
     }
+  }
+  .contact-info {
+    left: -1% !important;
   }
 }
 
@@ -328,7 +333,7 @@ i {
     transition: none !important;
     width: 100%;
     top: 7vh !important;
-    left: -1rem;
+    left: 0rem;
     h2 {
       font-size: 7.5rem !important;
       font-family: var(--font-display);
@@ -342,13 +347,34 @@ i {
     opacity: 1 !important;
     top: 50% !important;
     left: auto !important;
-    right: 15% !important;
-    width: 70% !important;
+    right: 7.5% !important;
+    width: 85% !important;
   }
 
   .contact-info {
+    height: 12rem !important;
+    display: flex;
+    flex-wrap: wrap;
     left: 2% !important;
+    bottom: 3% !important;
     width: 96%;
+  }
+  .contact-email {
+    order: 1;
+    width: 100%;
+  }
+  .contact-insta,
+  .contact-phone {
+    height: 80% !important;
+    width: 40% !important;
+    height: 100%;
+    position: absolute !important;
+    top: -60%;
+    transform: rotate(-10deg);
+  }
+  .contact-insta {
+    right: 0%;
+    transform: rotate(10deg);
   }
 }
 
