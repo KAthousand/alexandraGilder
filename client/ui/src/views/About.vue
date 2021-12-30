@@ -296,6 +296,7 @@ i {
 
 @media (max-width: 600px) {
   .about-container {
+    height: 105% !important;
     padding: 0;
   }
   .about-content {
@@ -356,7 +357,7 @@ i {
     display: flex;
     flex-wrap: wrap;
     left: 2% !important;
-    bottom: 3% !important;
+    bottom: 2% !important;
     width: 96%;
   }
   .contact-email {
