@@ -31,9 +31,9 @@
       <section class="fullpage" id="about" ref="about">
         <About :activeSection="activeSection" />
       </section>
-      <!-- <section class="fullpage" id="information" ref="information">
+      <section class="fullpage" id="location" ref="location">
         <Information :activeSection="activeSection" />
-      </section> -->
+      </section>
     </div>
   </div>
 </template>
@@ -55,7 +55,7 @@ export default Vue.extend({
     activeSection: 0,
     offsets: [],
     touchStartY: 0,
-    anchors: ["home", "services", "about"],
+    anchors: ["home", "services", "about", "location"],
     layoutScrollTop: 0,
   }),
   created() {

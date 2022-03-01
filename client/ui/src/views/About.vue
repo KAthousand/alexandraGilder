@@ -78,7 +78,7 @@
 </template>
 
 <script>
-import allyPhoto from "../assets/img/allyphoto.png"
+import allyPhoto from "../assets/img/allyBioPhoto02.jpg"
 export default {
   props: {
     activeSection: {
@@ -144,7 +144,7 @@ export default {
   background-color: var(--rainbow-grey-blue) !important;
 
   .about-img-container {
-    width: 50%;
+    width: 40%;
     position: relative;
 
     .about-img {
@@ -183,9 +183,9 @@ export default {
     .about-text-content {
       position: absolute;
       z-index: 5;
-      top: 28%;
-      left: 48%;
-      width: 35%;
+      top: 18%;
+      left: 52%;
+      width: 38%;
       padding: 5%;
       border: 2px solid var(--light);
       color: var(--light);

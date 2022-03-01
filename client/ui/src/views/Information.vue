@@ -1,7 +1,15 @@
 <template>
   <div class="container">
     <v-card class="information-card d-flex">
-      <div class="information-content">
+      <div
+        class="
+          information-content
+          d-flex
+          flex-column
+          justify-center
+          align-center
+        "
+      >
         <div class="info" style="margin-top: 1rem">
           <v-card-title class="info-title d-flex flex-column">
             LOCATION
@@ -17,28 +25,35 @@
             "
           ></v-divider>
           <v-card-text class="location-text">
-            <p>220 South Main St.</p>
-            <p>Royal Oak, MI, 48067</p>
-            <p>Inside Bamboo Royal Oak</p>
+            <p>150 Vester Ave.</p>
+            <p>Ferndale, MI, 48220</p>
+            <p>Inside Folio Coworking Space</p>
+            <span class="location-detail"
+              >* Metered parking in street or shared lot behind Imperial. <br />
+              Please enter through front door.</span
+            >
             <v-btn
               class="view-map-btn"
               depressed
-              href="https://www.google.com/maps/place/220+S+Main+St,+Royal+Oak,+MI+48067/@42.4883099,-83.1460264,17z/data=!3m1!4b1!4m5!3m4!1s0x8824cf421efdc121:0x326e3e5dd161ab96!8m2!3d42.4883099!4d-83.1445882"
+              href="https://www.google.com/maps/place/Folio+Ferndale/@42.4615352,-83.1336939,15z/data=!4m13!1m6!3m5!1s0x8824cfeb0b0ef811:0x35ec2173d57b6290!2sFolio+Ferndale!8m2!3d42.4612694!4d-83.1336827!3m5!1s0x8824cfeb0b0ef811:0x35ec2173d57b6290!8m2!3d42.4612694!4d-83.1336827!15sCg5mb2xpbyBmZXJuZGFsZZIBD2Nvd29ya2luZ19zcGFjZQ"
               target="_blank"
               >View on map</v-btn
             >
           </v-card-text>
         </div>
-        <a
-          href="https://www.google.com/maps/place/220+S+Main+St,+Royal+Oak,+MI+48067/@42.4883099,-83.1460264,17z/data=!3m1!4b1!4m5!3m4!1s0x8824cf421efdc121:0x326e3e5dd161ab96!8m2!3d42.4883099!4d-83.1445882"
-          target="_blank"
-          class="location-img-container"
-        >
-          <div class="location-img">
-            <v-img class="photo" :src="mapPhoto"> </v-img></div
-        ></a>
+        <div class="d-flex justify-center align-center">
+          <a
+            href="https://www.google.com/maps/place/Folio+Ferndale/@42.4615352,-83.1336939,15z/data=!4m13!1m6!3m5!1s0x8824cfeb0b0ef811:0x35ec2173d57b6290!2sFolio+Ferndale!8m2!3d42.4612694!4d-83.1336827!3m5!1s0x8824cfeb0b0ef811:0x35ec2173d57b6290!8m2!3d42.4612694!4d-83.1336827!15sCg5mb2xpbyBmZXJuZGFsZZIBD2Nvd29ya2luZ19zcGFjZQ"
+            target="_blank"
+            class="location-img-container"
+          >
+            <div class="location-img">
+              <v-img class="photo" :src="mapPhoto"></v-img>
+            </div>
+          </a>
+        </div>
 
-        <div class="info" style="padding: 1rem 0; width: 90%">
+        <!-- <div class="info" style="padding: 1rem 0; width: 90%">
           <v-card-title class="info-title d-flex flex-column">
             CONTACT
           </v-card-title>
@@ -72,10 +87,10 @@
               </a>
             </div>
           </v-card-text>
-        </div>
+        </div> -->
       </div>
       <a
-        href="https://www.google.com/maps/place/220+S+Main+St,+Royal+Oak,+MI+48067/@42.4883099,-83.1460264,17z/data=!3m1!4b1!4m5!3m4!1s0x8824cf421efdc121:0x326e3e5dd161ab96!8m2!3d42.4883099!4d-83.1445882"
+        href="https://www.google.com/maps/place/Folio+Ferndale/@42.4615352,-83.1336939,15z/data=!4m13!1m6!3m5!1s0x8824cfeb0b0ef811:0x35ec2173d57b6290!2sFolio+Ferndale!8m2!3d42.4612694!4d-83.1336827!3m5!1s0x8824cfeb0b0ef811:0x35ec2173d57b6290!8m2!3d42.4612694!4d-83.1336827!15sCg5mb2xpbyBmZXJuZGFsZZIBD2Nvd29ya2luZ19zcGFjZQ"
         target="_blank"
         class="map-container"
       >
@@ -86,8 +101,8 @@
 </template>
 
 <script>
-import bamboo from "../assets/img/bamboooutside.webp"
-import map from "../assets/img/mapphoto.png"
+import bamboo from "../assets/img/allyLocationPhoto.jpg"
+import map from "../assets/img/allyMapLocation.jpg"
 export default {
   data: () => ({
     map: map,
@@ -115,7 +130,7 @@ export default {
 
   .map-container {
     height: 100%;
-    width: 60%;
+    width: 50%;
     background-color: var(--rainbow-yellow);
     border-top-right-radius: 1.5rem !important;
     border-bottom-right-radius: 1.5rem !important;
@@ -131,9 +146,12 @@ export default {
   }
 
   .location-img {
-    height: 32%;
+    height: 100%;
+    width: 100%;
+    max-width: 465px;
+    // height: 32%;
     display: flex;
-    width: 70%;
+    // width: 70%;
     margin: -1rem auto 0 auto;
     border-radius: 0.5rem;
 
@@ -174,6 +192,13 @@ export default {
         flex-direction: column;
         justify-content: center;
         background-color: var(--rainbow-yellow);
+      }
+
+      .location-detail {
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        padding: 1rem 0;
       }
 
       .view-map-btn {

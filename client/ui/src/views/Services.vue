@@ -9,21 +9,35 @@
       </v-card-title>
       <v-card-title v-else class="services-title">services</v-card-title>
       <div style="height: 100%">
-        <div class="service-btn-container">
-          <v-btn
-            text
+        <div
+          class="
+            service-btn-container
+            d-flex
+            flex-wrap
+            justify-center
+            align-center
+          "
+        >
+          <div
             v-for="(massage, index) in massageInfo"
             :key="massage.title"
-            class="service-btn"
-            :class="massage.class"
-            :style="
-              activeSection === 1
-                ? `opacity: 1; transition-delay: ${index * 0.15}s`
-                : ' opacity: 0'
-            "
-            @click="handleClick(massage)"
-            >{{ massage.title }}</v-btn
+            class="btn-box d-flex justify-center align-center"
+            style="position: static"
           >
+            <v-btn
+              text
+              :key="massage.title"
+              class="service-btn"
+              :class="massage.class"
+              :style="
+                activeSection === 1
+                  ? `opacity: 1; transition-delay: ${index * 0.15}s`
+                  : ' opacity: 0'
+              "
+              @click="handleClick(massage)"
+              >{{ massage.title }}</v-btn
+            >
+          </div>
         </div>
       </div>
     </v-card>
@@ -174,16 +188,16 @@ export default {
         addon: "",
         class: "gua-sha",
       },
-      // {
-      //   title: "infrared",
-      //   description:
-      //     "Bringing all of the benefits of an infrared sauna experience to the massage table ",
-      //   img: infrared,
-      //   price: "Add $10 to Any Massage",
-      //   price2: "",
-      //   addon: "",
-      //   class: "infrared",
-      // },
+      {
+        title: "tension headache  \n session",
+        description:
+          "60 or 90 minute massage session geared to work specifically on pressure points in the face, head, and neck. The session focuses on upper body massage and stretching with deeper neck work than a typical session, as well as aromatherapy and scalp work.",
+        img: prenatal,
+        price: "Add $10 to Any Massage",
+        price2: "",
+        addon: "",
+        class: "infrared",
+      },
       // {
       //   title: "cryotherapy Massage",
       //   description:
@@ -231,6 +245,15 @@ export default {
   opacity: 0;
 }
 
+::v-deep {
+  .v-btn__content {
+    // border: 1px solid blue;
+    max-width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: pre;
+  }
+}
 .services-title {
   background-image: url("../assets/svgs/title.svg");
   background-repeat: no-repeat;
@@ -271,7 +294,7 @@ export default {
 
   .service-btn {
     font-size: 1.6rem;
-    border-radius: 50%;
+    // border-radius: 50%;
     text-transform: none;
     transition: 0.5s;
   }
@@ -285,7 +308,7 @@ export default {
     background-position: center;
     transform: rotate(-32deg);
     position: absolute;
-    left: 9%;
+    left: 2%;
     top: 22%;
     z-index: 2;
   }
@@ -299,7 +322,7 @@ export default {
     background-position: center;
     position: absolute;
     transform: rotate(-10deg);
-    left: 30%;
+    left: 24%;
     top: 5%;
     z-index: 2;
   }
@@ -313,7 +336,7 @@ export default {
     background-position: center;
     position: absolute;
     transform: rotate(8deg);
-    right: 30%;
+    right: 28%;
     top: 5%;
     z-index: 2;
   }
@@ -327,7 +350,7 @@ export default {
     background-position: center;
     position: absolute;
     transform: rotate(32deg);
-    right: 8%;
+    right: 5%;
     top: 22%;
     z-index: 2;
   }
@@ -341,8 +364,8 @@ export default {
     background-position: center;
     transform: rotate(30deg);
     position: absolute;
-    left: 10%;
-    bottom: 22%;
+    left: 2%;
+    bottom: 20%;
     z-index: 2;
   }
 
@@ -355,7 +378,8 @@ export default {
     background-position: center;
     transform: rotate(10deg);
     position: absolute;
-    left: 32%;
+    // left: 20%;
+    left: 28%;
     bottom: 6%;
     z-index: 2;
   }
@@ -370,19 +394,22 @@ export default {
     transform: rotate(-10deg);
     position: absolute;
     left: 55%;
-    bottom: 5%;
+    // left: 40%;
+    bottom: 2%;
     z-index: 2;
   }
 
   .infrared {
+    display: none;
     height: 15rem !important;
     width: 20rem !important;
     background-image: url("../assets/svgs/prenatal.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    transform: rotate(-10deg);
     position: absolute;
-    left: 44%;
+    left: 60%;
     bottom: 5%;
     z-index: 2;
   }
@@ -394,10 +421,10 @@ export default {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    transform: rotate(-16deg);
+    transform: rotate(-24deg);
     position: absolute;
-    right: 10%;
-    bottom: 15%;
+    right: 2%;
+    bottom: 20%;
     z-index: 2;
   }
 
@@ -408,10 +435,10 @@ export default {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    transform: rotate(-40deg);
-    position: absolute;
-    right: 5%;
-    bottom: 22%;
+    // transform: rotate(-40deg);
+    // position: absolute;
+    // right: 5%;
+    // bottom: 15%;
     z-index: 2;
   }
 }
