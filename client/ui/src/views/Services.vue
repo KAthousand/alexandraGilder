@@ -530,7 +530,7 @@ export default {
 
 @media (max-width: 1200px) {
   .container {
-    padding: 6vh 0 0 0;
+    padding: 6vh 0 6vh 0;
   }
   .services-content {
     border-radius: 0 !important;

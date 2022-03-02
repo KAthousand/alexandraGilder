@@ -270,7 +270,7 @@ i {
 
 @media (max-width: 1200px) {
   .about-container {
-    padding: 10rem 0 0 0;
+    padding: 10rem 0 10rem 0;
 
     height: 120% !important;
   }
@@ -306,7 +306,7 @@ i {
 
 @media (max-width: 822px) {
   .about-container {
-    padding: 10rem 0 0 0;
+    padding: 10rem 0 10rem 0;
 
     height: 120% !important;
   }
