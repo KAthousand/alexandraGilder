@@ -284,9 +284,11 @@ i {
   margin-bottom: 0 !important;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .container {
-    padding: 6vh 0 0 0;
+    margin-top: 6vh !important;
+    padding: 0 !important;
+    height: 90%;
   }
   .information-card {
     border-radius: 0px !important;

@@ -205,10 +205,19 @@ export default Vue.extend({
   align-items: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1400px) {
+  #location {
+    align-items: flex-end !important;
+    height: 120vh;
+    margin-top: 20rem;
+  }
+}
+
+@media (max-width: 820px) {
   .fullpage {
     width: 100vw;
     height: 120vh;
+    max-width: 100vw;
     // display: block;
     margin: 10vh 0;
   }

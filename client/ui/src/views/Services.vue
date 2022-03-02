@@ -528,12 +528,19 @@ export default {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .container {
-    padding: 6vh 0 6vh 0;
+    padding: 6vh 0 6vh 0 !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    padding: 0 !important;
+    margin-top: 10rem;
+    margin-bottom: 10rem !important;
   }
   .services-content {
     border-radius: 0 !important;
+    max-width: 100vw !important;
+    width: 100% !important;
     display: flex;
     flex-direction: column;
     background-image: url("../assets/svgs/services2.svg");
