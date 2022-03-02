@@ -272,7 +272,7 @@ i {
   .about-container {
     padding: 10rem 0 0 0;
 
-    height: 105% !important;
+    height: 120% !important;
   }
   .about-title {
     width: 75%;
