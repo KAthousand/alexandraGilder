@@ -270,9 +270,9 @@ i {
 
 @media (max-width: 1200px) {
   .about-container {
-    padding: 10rem 0 10rem 0;
+    padding: 20rem 0 20rem 0;
 
-    height: 120% !important;
+    height: 140% !important;
   }
   .about-title {
     width: 75%;
@@ -304,7 +304,7 @@ i {
   }
 }
 
-@media (max-width: 822px) {
+@media (max-width: 820px) {
   .about-container {
     padding: 25rem 0 25rem 0;
 
