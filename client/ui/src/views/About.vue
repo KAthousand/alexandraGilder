@@ -306,9 +306,9 @@ i {
 
 @media (max-width: 822px) {
   .about-container {
-    padding: 10rem 0 10rem 0;
+    padding: 25rem 0 25rem 0;
 
-    height: 120% !important;
+    height: 140% !important;
   }
 
   .about-content {
