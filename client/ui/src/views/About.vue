@@ -305,6 +305,12 @@ i {
 }
 
 @media (max-width: 822px) {
+  .about-container {
+    padding: 10rem 0 0 0;
+
+    height: 120% !important;
+  }
+
   .about-content {
     border-radius: 0 !important;
     background-image: url("../assets/svgs/about2.svg");
