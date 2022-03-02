@@ -124,7 +124,7 @@ export default {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 821px) {
   .dash-nav-container {
     position: absolute;
     height: 7vh;

@@ -129,7 +129,7 @@ export default {
   transition: 0.5s ease-in-out;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 821px) {
   .nav-container {
     height: 10vh;
     background-color: transparent !important;

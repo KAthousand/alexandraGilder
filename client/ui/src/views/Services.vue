@@ -601,7 +601,7 @@ export default {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 821px) {
   .services-title {
     opacity: 1;
     margin-top: 4vh;

@@ -212,7 +212,7 @@ export default Vue.extend({
     // display: block;
     margin: 10vh 0;
   }
-  #information {
+  #location {
     height: 100vh;
     margin-bottom: 0;
   }
