@@ -124,7 +124,7 @@ export default {
         description:
           "Full body treatment sessions catered specifically to client needs with aromatherapy.",
         img: swedish,
-        price: "$70 per 60 min session",
+        price: "$80 per 60 min session",
         price2: "$100 per 90min session",
         addon: "~add deep tissue for $20~",
         class: "swedish",
@@ -153,7 +153,7 @@ export default {
         description:
           "Customized massage therapy to support the growing body's natural transitions through childbirth",
         img: prenatal,
-        price: "$60 per 60 min session",
+        price: "$80 per 60 min session",
         price2: "$90 per 90 min session",
         addon: "",
         class: "prenatal",

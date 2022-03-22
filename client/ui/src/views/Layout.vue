@@ -209,7 +209,7 @@ export default Vue.extend({
   #location {
     align-items: flex-end !important;
     height: 120vh;
-    margin-top: 20rem;
+    margin-top: 2rem;
   }
 }
 
