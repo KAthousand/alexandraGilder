@@ -140,7 +140,7 @@ export default {
   box-shadow: 0px 20px 38px -21px rgba(0, 0, 0, 0.46) !important;
   height: 100%;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   background-color: var(--rainbow-grey-blue) !important;
 
   .about-img-container {
@@ -148,6 +148,7 @@ export default {
     position: relative;
 
     .about-img {
+      max-width: 500px;
       border-radius: 0.8rem;
       position: absolute;
       top: 10%;
@@ -185,7 +186,7 @@ export default {
       z-index: 5;
       top: 18%;
       left: 52%;
-      width: 38%;
+      width: 35%;
       padding: 5%;
       border: 2px solid var(--light);
       color: var(--light);
@@ -215,7 +216,7 @@ export default {
   bottom: 2%;
   width: 80rem;
   z-index: 5;
-  left: 10%;
+  left: 20%;
 
   .contact-email,
   .contact-phone,
@@ -434,7 +435,7 @@ i {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 415px) {
   .about-container {
     margin: 0rem !important;
   }
@@ -453,21 +454,28 @@ i {
     height: 60%;
   }
 
+  .contact-info {
+    height: 20% !important;
+  }
+
   .contact-email {
-    order: 1;
     height: 90% !important;
     width: 40% !important;
-    margin: 0 auto !important;
   }
-  .contact-insta,
+
   .contact-phone {
-    width: 28% !important;
-    top: 10%;
+    width: 40% !important;
+    height: 45% !important;
+    top: 5%;
+    right: 10% !important;
     transform: rotate(0deg) !important;
   }
   .contact-insta {
     right: 0%;
-    transform: rotate(10deg);
+    width: 35% !important;
+    height: 45% !important;
+    top: 50%;
+    transform: rotate(0deg);
   }
 }
 
