@@ -434,6 +434,43 @@ i {
   }
 }
 
+@media (max-width: 400px) {
+  .about-container {
+    margin: 0rem !important;
+  }
+  .about-text {
+    padding: 0 !important;
+  }
+  .about-text-content {
+    width: 92% !important;
+    left: 0% !important;
+    top: 45% !important;
+    right: auto !important;
+    margin: 0 4% !important;
+  }
+
+  .about-img-container {
+    height: 60%;
+  }
+
+  .contact-email {
+    order: 1;
+    height: 90% !important;
+    width: 40% !important;
+    margin: 0 auto !important;
+  }
+  .contact-insta,
+  .contact-phone {
+    width: 28% !important;
+    top: 10%;
+    transform: rotate(0deg) !important;
+  }
+  .contact-insta {
+    right: 0%;
+    transform: rotate(10deg);
+  }
+}
+
 @media screen and (max-height: 400px) and (max-width: 850px) {
   .about-container {
     padding: 0;
