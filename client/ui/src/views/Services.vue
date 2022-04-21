@@ -154,7 +154,7 @@ export default {
           "Customized massage therapy to support the growing body's natural transitions through childbirth",
         img: prenatal,
         price: "$80 per 60 min session",
-        price2: "$90 per 90 min session",
+        price2: "$100 per 90 min session",
         addon: "",
         class: "prenatal",
       },
