@@ -125,8 +125,8 @@ export default {
           "Full body treatment sessions catered specifically to client needs with aromatherapy.",
         img: swedish,
         price: "$80 per 60 min session",
-        price2: "$100 per 90min session",
-        addon: "~add deep tissue for $20~",
+        price2: "$120 per 90min session",
+        addon: "~add deep tissue for $10~",
         class: "swedish",
       },
       {
@@ -143,7 +143,7 @@ export default {
         description:
           "Applying a blend of 7 different essential oils to the spine and bottoms of the feet helps to relieve respiratory discomfort, enhance positive emotions and relieve stress, ease muscle tensions and provide a powerful immunity boost",
         img: aleahiaHand,
-        price: "$120 per 90 min massage + oils",
+        price: "$130 per 90 min massage + oils",
         price2: "",
         addon: "",
         class: "raindrop",
@@ -163,7 +163,7 @@ export default {
         description:
           "Massage + cupping helps to relieve tension by creating suction in areas of need. This deep tissue effect helps promote circulation, decrease inflammation, and relieve pain",
         img: cupping,
-        price: "Add $20 to Any Massage",
+        price: "Add $15 to Any Massage",
         price2: "",
         addon: "",
         class: "cupping",
@@ -183,7 +183,7 @@ export default {
         description:
           "Used as a deep tension release method in tradition Chinese healing medicine, Gua Sha, or muscle scraping, takes a crystal or metal tool and scrapes along the neck, face, and shoulders. Helpful with lymph drainage and circulation to stagnant areas of the body. Redness will occur.",
         img: guasha,
-        price: "Add $20 to Any Massage",
+        price: "Add $15 to Any Massage",
         price2: "",
         addon: "",
         class: "gua-sha",
