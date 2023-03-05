@@ -134,7 +134,7 @@ export default {
         description: "Massage with hot or cold basalt stones, hands and aromatherapy",
         img: cryo,
         price: "$90 per 60 min session",
-        price2: "$120 per 90 min session",
+        price2: "$140 per 90 min session",
         addon: "",
         class: "hot-stone",
       },
