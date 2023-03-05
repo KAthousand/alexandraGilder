@@ -124,14 +124,14 @@ export default {
         description:
           "Full body treatment sessions catered specifically to client needs with aromatherapy.",
         img: swedish,
-        price: "$80 per 60 min session",
-        price2: "$120 per 90min session",
+        price: "$90 per 60 min session",
+        price2: "$130 per 90min session",
         addon: "~add deep tissue for $10~",
         class: "swedish",
       },
       {
-        title: "hot stone massage",
-        description: "Massage with basalt stones, hands and aromatherapy",
+        title: "stone massage",
+        description: "Massage with hot or cold basalt stones, hands and aromatherapy",
         img: cryo,
         price: "$90 per 60 min session",
         price2: "$120 per 90 min session",
@@ -143,7 +143,7 @@ export default {
         description:
           "Applying a blend of 7 different essential oils to the spine and bottoms of the feet helps to relieve respiratory discomfort, enhance positive emotions and relieve stress, ease muscle tensions and provide a powerful immunity boost",
         img: aleahiaHand,
-        price: "$130 per 90 min massage + oils",
+        price: "$140 per 90 min massage + oils",
         price2: "",
         addon: "",
         class: "raindrop",
