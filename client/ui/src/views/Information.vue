@@ -25,17 +25,17 @@
             "
           ></v-divider>
           <v-card-text class="location-text">
-            <p>150 Vester Ave.</p>
-            <p>Ferndale, MI, 48220</p>
-            <p>Inside Folio Coworking Space</p>
-            <span class="location-detail"
+            <p>1320 N Campbell Rd.</p>
+            <p>Royal Oak, MI, 48067</p>
+            <!-- <p>Inside Folio Coworking Space</p> -->
+            <!-- <span class="location-detail"
               >* Metered parking in street or shared lot behind Imperial. <br />
               Please enter through front door.</span
-            >
+            > -->
             <v-btn
               class="view-map-btn"
               depressed
-              href="https://www.google.com/maps/place/Folio+Ferndale/@42.4615352,-83.1336939,15z/data=!4m13!1m6!3m5!1s0x8824cfeb0b0ef811:0x35ec2173d57b6290!2sFolio+Ferndale!8m2!3d42.4612694!4d-83.1336827!3m5!1s0x8824cfeb0b0ef811:0x35ec2173d57b6290!8m2!3d42.4612694!4d-83.1336827!15sCg5mb2xpbyBmZXJuZGFsZZIBD2Nvd29ya2luZ19zcGFjZQ"
+              href="https://www.google.com/maps/place/1320+N+Campbell+Rd,+Royal+Oak,+MI+48067/@42.5017229,-83.1267433,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c5807f21cc6f:0x689ba551598cd2b!8m2!3d42.5017229!4d-83.1245493!16s%2Fg%2F11g4g71hys"
               target="_blank"
               >View on map</v-btn
             >
@@ -43,7 +43,7 @@
         </div>
         <div class="d-flex justify-center align-center">
           <a
-            href="https://www.google.com/maps/place/Folio+Ferndale/@42.4615352,-83.1336939,15z/data=!4m13!1m6!3m5!1s0x8824cfeb0b0ef811:0x35ec2173d57b6290!2sFolio+Ferndale!8m2!3d42.4612694!4d-83.1336827!3m5!1s0x8824cfeb0b0ef811:0x35ec2173d57b6290!8m2!3d42.4612694!4d-83.1336827!15sCg5mb2xpbyBmZXJuZGFsZZIBD2Nvd29ya2luZ19zcGFjZQ"
+            href="https://www.google.com/maps/place/1320+N+Campbell+Rd,+Royal+Oak,+MI+48067/@42.5017229,-83.1267433,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c5807f21cc6f:0x689ba551598cd2b!8m2!3d42.5017229!4d-83.1245493!16s%2Fg%2F11g4g71hys"
             target="_blank"
             class="location-img-container"
           >
@@ -101,8 +101,8 @@
 </template>
 
 <script>
-import bamboo from "../assets/img/allyLocationPhoto.jpg"
-import map from "../assets/img/allyMapLocation.jpg"
+import bamboo from "../assets/img/allyLocationPhoto.png"
+import map from "../assets/img/allyMapLocation.png"
 export default {
   data: () => ({
     map: map,
