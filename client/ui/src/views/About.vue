@@ -39,6 +39,7 @@
             </p>
             <br />
             <p>
+              Preferred/fastest contact method is text message. 
               House calls are available to schedule via text message -only-
               <br/>
               <br/>
@@ -46,9 +47,6 @@
             </p>
             <br />
             <p>
-              Preferred/fastest contact method is text message. 
-              <br />
-              <br/>
               If you are attempting to book a session and don’t see what you hope for, reach out. I refer to those on my cancellation list first when things on my schedule open up. I also often post session openings on my instagram story for bookings. 
 
             </p>
