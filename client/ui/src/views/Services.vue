@@ -66,11 +66,11 @@
               </template>
             </v-img>
             <v-card-text class="dialog-text-container">
-              <!-- <v-divider></v-divider> -->
-              <div class="dialog-text" style="height: 70%">
+              <v-divider></v-divider>
+              <div class="dialog-text" style="height: 73%">
                 <p>{{ currentMassage.description }}</p>
               </div>
-              <!-- <v-divider></v-divider> -->
+              <v-divider></v-divider>
               <div class="dialog-text" style="height: 50%">
                 <h6>{{ currentMassage.price }}</h6>
                 <h6>{{ currentMassage.price2 }}</h6>
