@@ -66,11 +66,11 @@
               </template>
             </v-img>
             <v-card-text class="dialog-text-container">
-              <v-divider></v-divider>
+              <!-- <v-divider></v-divider> -->
               <div class="dialog-text" style="height: 70%">
                 <p>{{ currentMassage.description }}</p>
               </div>
-              <v-divider></v-divider>
+              <!-- <v-divider></v-divider> -->
               <div class="dialog-text" style="height: 50%">
                 <h6>{{ currentMassage.price }}</h6>
                 <h6>{{ currentMassage.price2 }}</h6>
@@ -153,7 +153,7 @@ export default {
       {
         title: "prenatal massage",
         description:
-          "Full body customized massage session to support the growing body's natural transitions through childbirth. This massage is typically sidelying using pillows for comfort. In circumstances of discomfort while lying on your side, we will use a yoga ball seated position for session.",
+          "Full body customized massage session to support the growing body's natural transitions through childbirth. This massage is typically sidelying using pillows for comfort. if discomfort occurs, we will use a yoga ball seated position for session",
         img: prenatal,
         price: "$100 per 60 min session",
         price2: "$130 per 90 min session",
@@ -657,9 +657,9 @@ export default {
       justify-content: center !important;
       p {
         margin-bottom: 0;
-        font-size: 1.5rem !important;
+        font-size: 1.45rem !important;
         letter-spacing: 0.8;
-        line-height: 2.2rem;
+        line-height: 1.8rem !important;
       }
 
       h6 {
