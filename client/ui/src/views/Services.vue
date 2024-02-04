@@ -39,9 +39,6 @@
             >
           </div>
         </div>
-      <div class='faq-container'>
-              <h4>What kind of service is right for me?</h4>
-          </div>
       </div>
     </v-card>
     <div v-if="this.currentMassage">
@@ -122,6 +119,16 @@ export default {
     observer: null,
     currentMassage: "",
     massageInfo: [
+                  {
+        title: "which service is right for me?",
+        description:
+          "If it’s been a long time, or it’s your first time, my suggestion is a standard 60 or 90 minute session. Standard meaning no added on services like cupping or gua sha. This invites me to assess your current physical state and make suggestions for your care moving forward. ",
+        img: cryo,
+        price: "",
+        price2: "",
+        addon: "",
+        class: "faq-container",
+      },
       {
         title: "massage",
         description:
@@ -201,16 +208,6 @@ export default {
         addon: "",
         class: "infrared",
       },
-      // {
-      //   title: "cryotherapy Massage",
-      //   description:
-      //     "Using this form of cold treatment with massage therapy helps boost the immune system response, decrease inflammation and swelling in areas of injury, and reduce pain",
-      //   img: cryo,
-      //   price: "Add $10 to Any Massage",
-      //   price2: "",
-      //   addon: "",
-      //   class: "cryo",
-      // },
       {
         title: "steam",
         description:
@@ -435,8 +432,8 @@ export default {
   .cryo {
     height: 15rem !important;
     width: 20rem !important;
-    background-image: url("../assets/svgs/cupping.svg");
-    background-repeat: no-repeat;
+    // background-image: url("../assets/svgs/cupping.svg");
+    // background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     // transform: rotate(-40deg);
@@ -445,16 +442,22 @@ export default {
     // bottom: 15%;
     z-index: 2;
   }
+
+    .faq-container {
+    position: absolute;
+    top: 52%;
+    left: 41%;
+    width: 20rem !important;
+    // margin-top: 80px;
+    font-weight: bold;
+    // margin-left: 60px;
+    color: var(--dark);
+    font-size: 1.1rem;
+    letter-spacing: .8px;
+  }
 }
 
-.faq-container{
-  // border: 1px solid red;
-  margin-top: 80px;
-  // margin-left: 60px;
-  color: var(--dark);
-  font-size: 1.2rem;
-  letter-spacing: .8px;
-}
+
 
 .dialog-title {
   font-weight: bold;
@@ -599,6 +602,7 @@ export default {
       top: 0;
       left: 0;
     }
+    
 
     .prenatal,
     .moxa,
@@ -618,6 +622,19 @@ export default {
     .moxa {
       margin-right: 2rem;
     }
+
+    .faq-container {
+      border-radius: 0 !important;
+      position: absolute;
+      top: 0;
+      left: 40%;
+      margin: 1.5rem auto;
+      height: 10rem;
+      width: 100%;
+      font-weight: bold;
+      font-size: 1.3rem;
+      letter-spacing: .8px;
+    }
   }
 }
 
@@ -630,6 +647,8 @@ export default {
   .service-btn {
     opacity: 1 !important;
   }
+
+
 
   .dialog-text-container {
     .dialog-text {
@@ -648,6 +667,17 @@ export default {
       }
     }
   }
+
+    .faq-container {
+      position: absolute;
+      top: -5% !important;
+      left: 36vw !important;
+      height: 8rem;
+      border-radius: 0;
+      font-size: 1.3rem;
+      letter-spacing: .8px;
+  }
+
 }
 
 @media screen and (max-height: 400px) and (max-width: 850px) {
