@@ -119,16 +119,7 @@ export default {
     observer: null,
     currentMassage: "",
     massageInfo: [
-                  {
-        title: "which service is right for me?",
-        description:
-          "If it’s been a long time, or it’s your first time, my suggestion is a standard 60 or 90 minute session. Standard meaning no added on services like cupping or gua sha. This invites me to assess your current physical state and make suggestions for your care moving forward. ",
-        img: cryo,
-        price: "",
-        price2: "",
-        addon: "",
-        class: "faq-container",
-      },
+      
       {
         title: "massage",
         description:
@@ -139,6 +130,7 @@ export default {
         addon: "~add cupping for $10~",
         class: "swedish",
       },
+      
       {
         title: "reset",
         description: "A 90 minute full body massage using eucalyptus, oregano, and peppermint oils, cupping, infrared therapy, and hot towel treatment.",
@@ -207,6 +199,16 @@ export default {
         price2: "",
         addon: "",
         class: "infrared",
+      },
+      {
+        title: "which offering is right for me?",
+        description:
+          "If it’s been a long time, or it’s your first time, my suggestion is a standard 60 or 90 minute session. Standard meaning no added on services like cupping or gua sha. This invites me to assess your current physical state and make suggestions for your care moving forward. ",
+        img: cryo,
+        price: "",
+        price2: "",
+        addon: "",
+        class: "faq-container",
       },
       {
         title: "steam",
