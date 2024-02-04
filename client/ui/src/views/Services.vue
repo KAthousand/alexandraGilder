@@ -201,7 +201,7 @@ export default {
         class: "infrared",
       },
       {
-        title: "which offering is right for me?",
+        title: "which offer is right for me?",
         description:
           "If it’s been a long time, or it’s your first time, my suggestion is a standard 60 or 90 minute session. Standard meaning no added on services like cupping or gua sha. This invites me to assess your current physical state and make suggestions for your care moving forward. ",
         img: cryo,
@@ -673,7 +673,7 @@ export default {
     .faq-container {
       position: absolute;
       top: -5% !important;
-      left: 36vw !important;
+      left: calc(50% - 10rem) !important;
       height: 8rem;
       border-radius: 0;
       font-size: 1.3rem;
