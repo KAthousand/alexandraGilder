@@ -5,9 +5,9 @@
         v-if="activeSection === 1"
         class="services-title transition-in"
       >
-        services
+        offerings
       </v-card-title>
-      <v-card-title v-else class="services-title">services</v-card-title>
+      <v-card-title v-else class="services-title">offerings</v-card-title>
       <div style="height: 100%">
         <div
           class="
@@ -39,6 +39,9 @@
             >
           </div>
         </div>
+      <div class='faq-container'>
+              <h4>What kind of service is right for me?</h4>
+          </div>
       </div>
     </v-card>
     <div v-if="this.currentMassage">
@@ -120,30 +123,30 @@ export default {
     currentMassage: "",
     massageInfo: [
       {
-        title: "swedish massage",
+        title: "massage",
         description:
-          "Full body treatment sessions catered specifically to client needs with aromatherapy.",
+          "60 or 90 minute session catered to your physical and emotional needs with aroma therapy and hot towel treatment.",
         img: swedish,
-        price: "$90 per 60 min session",
+        price: "$100 per 60 min session",
         price2: "$130 per 90min session",
-        addon: "~add deep tissue for $10~",
+        addon: "~add cupping for $10~",
         class: "swedish",
       },
       {
-        title: "stone massage",
-        description: "Massage with hot or cold basalt stones, hands and aromatherapy",
+        title: "reset",
+        description: "A 90 minute full body massage using eucalyptus, oregano, and peppermint oils, cupping, infrared therapy, and hot towel treatment.",
         img: cryo,
-        price: "$90 per 60 min session",
-        price2: "$140 per 90 min session",
+        price: "$160 per 60 min session",
+        price2: "",
         addon: "",
         class: "hot-stone",
       },
       {
-        title: "raindrop technique",
+        title: "deep rest",
         description:
-          "Applying a blend of 7 different essential oils to the spine and bottoms of the feet helps to relieve respiratory discomfort, enhance positive emotions and relieve stress, ease muscle tensions and provide a powerful immunity boost",
-        img: aleahiaHand,
-        price: "$140 per 90 min massage + oils",
+          "A 90 minute full deep tissue massage with lavender CBD salve, hot towel treatment, and aromatherapy with focus on scalp, hands, and feet.",
+        img: moxa,
+        price: "$150 per 90 min massage",
         price2: "",
         addon: "",
         class: "raindrop",
@@ -151,49 +154,49 @@ export default {
       {
         title: "prenatal massage",
         description:
-          "Customized massage therapy to support the growing body's natural transitions through childbirth",
+          "Full body customized massage session to support the growing body's natural transitions through childbirth. This massage is typically sidelying using pillows for comfort. In circumstances of discomfort while lying on your side, we will use a yoga ball seated position for session.",
         img: prenatal,
-        price: "$80 per 60 min session",
-        price2: "$100 per 90 min session",
+        price: "$100 per 60 min session",
+        price2: "$130 per 90 min session",
         addon: "",
         class: "prenatal",
       },
       {
-        title: "cupping",
+        title: "release & grounding",
         description:
-          "Massage + cupping helps to relieve tension by creating suction in areas of need. This deep tissue effect helps promote circulation, decrease inflammation, and relieve pain",
+          "A 90 minute full body massage with lemongrass, cedar, and rosemary essential oils, hot towel treatment, cupping, and moxa with attention to abdomen and hips.",
         img: cupping,
-        price: "Add $15 to Any Massage",
+        price: "$160 per 90 min session",
         price2: "",
         addon: "",
         class: "cupping",
       },
       {
-        title: "moxa",
+        title: "cleanse",
         description:
-          "Moxa is a form of heat therapy in which dried plant matter is burned near the surface of your skin with intention to promote circulation and dispel certain pathogenic influences",
-        img: moxa,
-        price: "Add $10 to Any Massage",
+          "Full body dry brushing and 60 minute full body massage with aromatherapy and hot towel treatment. Total session is 90 minutes.",
+        img: aleahiaHand,
+        price: "$150 per 90 min session",
         price2: "",
         addon: "",
         class: "moxa",
       },
       {
-        title: "gua sha",
+        title: "tmj session",
         description:
-          "Used as a deep tension release method in tradition Chinese healing medicine, Gua Sha, or muscle scraping, takes a crystal or metal tool and scrapes along the neck, face, and shoulders. Helpful with lymph drainage and circulation to stagnant areas of the body. Redness will occur.",
+          "60 minute massage session including buccal massage (inside of mouth), facial massage, gua sha, cupping of the neck and face, deep tissue neck and scalp massage",
         img: guasha,
-        price: "Add $15 to Any Massage",
+        price: "$150 per 60 min session",
         price2: "",
-        addon: "",
+        addon: "* This session is not full body.",
         class: "gua-sha",
       },
       {
-        title: "tension headache  \n session",
+        title: "polish & tone",
         description:
-          "60 or 90 minute massage session geared to work specifically on pressure points in the face, head, and neck. The session focuses on upper body massage and stretching with deeper neck work than a typical session, as well as aromatherapy and scalp work.",
+          "Full body dry brushing, hot towel treatment, full body gua sha, and 60 minute massage. Total session is 90 minutes.",
         img: prenatal,
-        price: "Add $10 to Any Massage",
+        price: "$160 per 90 min session",
         price2: "",
         addon: "",
         class: "infrared",
@@ -209,11 +212,11 @@ export default {
       //   class: "cryo",
       // },
       {
-        title: "cbd massage",
+        title: "steam",
         description:
-          "Massage with hands, forearms and CBD oil. Oil placed on joints, bottoms of feet and neck help aid with inflammation and relaxation",
+          "Full body hot stone massage with rose water facial steam",
         img: cbd,
-        price: "Add $10 to Any Massage",
+        price: "$150 per 90 min session",
         price2: "",
         addon: "",
         class: "cbd",
@@ -265,12 +268,13 @@ export default {
   width: 22rem;
   position: absolute;
   top: 32%;
-  left: 42%;
+  left: 40%;
   font-size: 3.2rem;
   font-weight: bold;
   letter-spacing: 2px;
   opacity: 0;
   color: var(--dark);
+  // border: 1px solid blue;
 }
 
 .services-content {
@@ -441,6 +445,15 @@ export default {
     // bottom: 15%;
     z-index: 2;
   }
+}
+
+.faq-container{
+  // border: 1px solid red;
+  margin-top: 80px;
+  // margin-left: 60px;
+  color: var(--dark);
+  font-size: 1.2rem;
+  letter-spacing: .8px;
 }
 
 .dialog-title {

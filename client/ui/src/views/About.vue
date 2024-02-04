@@ -31,24 +31,25 @@
             :style="activeSection === 2 ? 'opacity: 1' : 'opacity: 0'"
           >
             <p>
-              Alexandra is an intuitive practitioner with an aim to help clients
-              experience alleviation of pain symptoms, discomfort and stress.
+              Alexandra is a Michigan licensed Massage Therapist based in the metro Detroit area. Specializing in modalities such as prenatal massage, trigger point therapy, gua sha, cupping, buccal and facial massage for TMJ, muscle lifting, etc.
             </p>
             <br />
             <p>
-              She believes in the body's natural processes, its ability to heal
-              itself and help assist others in whatever form of therapies best
-              suited for their needs
+              Her training is vast amongst places like Irene’s Myomassology Institute and the Esalen Institute. Alexandra is a spiritually curious practitioner &amp; avid student of the body. Sessions reflect your personal and emotional needs. Inquire within to better customize your experience.
             </p>
             <br />
             <p>
-              Nurturing, therapeutic and attentive with a focus on specific
-              needs to build a customized session for everyone
+              House calls are available to schedule via text message -only-
+              <br/>
+              <br/>
+              Prices vary please contact for more information to schedule 
             </p>
             <br />
             <p>
-              Prices reflect the idea that clients can build a maintenance
-              routine to manage stress and tension contact by phone to schedule.
+              Preferred/fastest contact method is text message. 
+              <br />
+              If you are attempting to book a session and don’t see what you hope for, reach out. I refer to those on my cancellation list first when things on my schedule open up. I also often post session openings on my instagram story for bookings. 
+
             </p>
           </div>
           <v-card-text class="contact-info">
@@ -186,7 +187,7 @@ export default {
       z-index: 5;
       top: 18%;
       left: 52%;
-      width: 35%;
+      width: 37%;
       padding: 5%;
       border: 2px solid var(--light);
       color: var(--light);
@@ -194,7 +195,7 @@ export default {
       transition-delay: 0.5s;
 
       p {
-        font-size: 1.4rem;
+        font-size: 1.15rem;
         line-height: 1.6rem;
         letter-spacing: 1px;
         font-weight: 600;
@@ -399,8 +400,8 @@ i {
     font-size: 1.8rem !important;
 
     p {
-      font-size: 1.8rem !important;
-      line-height: 1.8rem !important;
+      font-size: 1.25rem !important;
+      line-height: 1.6rem !important;
       letter-spacing: 1px;
       font-weight: 600;
       margin-bottom: 0;
