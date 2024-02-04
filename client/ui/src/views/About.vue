@@ -446,13 +446,13 @@ i {
   .about-text-content {
     width: 92% !important;
     left: 0% !important;
-    top: 45% !important;
+    top: 37% !important;
     right: auto !important;
     margin: 0 4% !important;
   }
 
   .about-img-container {
-    height: 60%;
+    height: 50%;
   }
 
   .contact-info {

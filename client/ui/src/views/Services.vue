@@ -203,7 +203,7 @@ export default {
       {
         title: "which offer is right for me?",
         description:
-          "If it’s been a long time, or it’s your first time, my suggestion is a standard 60 or 90 minute session. Standard meaning no added on services like cupping or gua sha. This invites me to assess your current physical state and make suggestions for your care moving forward. ",
+          "If it’s your first time, or been a long time, my suggestion is a standard 60 or 90 minute session. Standard meaning no add ons like cupping or gua sha. This invites me to assess your current physical state and make suggestions for your care moving forward.",
         img: cryo,
         price: "",
         price2: "",
@@ -657,7 +657,7 @@ export default {
       justify-content: center !important;
       p {
         margin-bottom: 0;
-        font-size: 1.6rem !important;
+        font-size: 1.5rem !important;
         letter-spacing: 0.8;
         line-height: 2.2rem;
       }
