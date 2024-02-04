@@ -449,6 +449,16 @@ i {
     top: 37% !important;
     right: auto !important;
     margin: 0 4% !important;
+
+    p {
+      font-size: 1.25rem !important;
+      line-height: 1.5rem !important;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin-bottom: 0;
+      z-index: 5;
+      padding: 0 6px !important;
+    }
   }
 
   .about-img-container {
