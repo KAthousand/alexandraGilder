@@ -127,7 +127,7 @@ export default {
         img: swedish,
         price: "$100 per 60 min session",
         price2: "$130 per 90min session",
-        addon: "~add cupping for $10~",
+        addon: "",
         class: "swedish",
       },
       
@@ -135,7 +135,7 @@ export default {
         title: "reset",
         description: "A 90 minute full body massage using eucalyptus, oregano, and peppermint oils, cupping, infrared therapy, and hot towel treatment.",
         img: cryo,
-        price: "$160 per 60 min session",
+        price: "$150 per session",
         price2: "",
         addon: "",
         class: "hot-stone",
@@ -158,7 +158,7 @@ export default {
         price: "$100 per 60 min session",
         price2: "$130 per 90 min session",
         addon: "",
-        class: "prenatal",
+        class: "gua-sha",
       },
       {
         title: "release & grounding",
@@ -180,16 +180,16 @@ export default {
         addon: "",
         class: "moxa",
       },
-      {
-        title: "tmj session",
-        description:
-          "60 minute massage session including buccal massage (inside of mouth), facial massage, gua sha, cupping of the neck and face, deep tissue neck and scalp massage",
-        img: guasha,
-        price: "$150 per 60 min session",
-        price2: "",
-        addon: "* This session is not full body.",
-        class: "gua-sha",
-      },
+      // {
+      //   title: "tmj session",
+      //   description:
+      //     "60 minute massage session including buccal massage (inside of mouth), facial massage, gua sha, cupping of the neck and face, deep tissue neck and scalp massage",
+      //   img: guasha,
+      //   price: "$150 per 60 min session",
+      //   price2: "",
+      //   addon: "* This session is not full body.",
+      //   class: "gua-sha",
+      // },
       {
         title: "polish & tone",
         description:
@@ -210,16 +210,16 @@ export default {
         addon: "",
         class: "faq-container",
       },
-      {
-        title: "steam",
-        description:
-          "Full body hot stone massage with rose water facial steam",
-        img: cbd,
-        price: "$150 per 90 min session",
-        price2: "",
-        addon: "",
-        class: "cbd",
-      },
+      // {
+      //   title: "steam",
+      //   description:
+      //     "Full body hot stone massage with rose water facial steam",
+      //   img: cbd,
+      //   price: "$150 per 90 min session",
+      //   price2: "",
+      //   addon: "",
+      //   class: "cbd",
+      // },
     ],
   }),
   methods: {
@@ -311,7 +311,7 @@ export default {
     background-position: center;
     transform: rotate(-32deg);
     position: absolute;
-    left: 2%;
+    left: 16%;
     top: 22%;
     z-index: 2;
   }
@@ -325,7 +325,7 @@ export default {
     background-position: center;
     position: absolute;
     transform: rotate(-10deg);
-    left: 24%;
+    left: 40%;
     top: 5%;
     z-index: 2;
   }
@@ -338,9 +338,9 @@ export default {
     background-size: contain;
     background-position: center;
     position: absolute;
-    transform: rotate(8deg);
-    right: 28%;
-    top: 5%;
+    transform: rotate(14deg);
+    right: 20%;
+    top: 20%;
     z-index: 2;
   }
 
@@ -367,7 +367,7 @@ export default {
     background-position: center;
     transform: rotate(30deg);
     position: absolute;
-    left: 2%;
+    left: 18%;
     bottom: 20%;
     z-index: 2;
   }
@@ -379,11 +379,11 @@ export default {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    transform: rotate(10deg);
+    transform: rotate(6deg);
     position: absolute;
     // left: 20%;
-    left: 28%;
-    bottom: 6%;
+    left: 40%;
+    bottom: 10%;
     z-index: 2;
   }
 
@@ -394,11 +394,12 @@ export default {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    transform: rotate(-10deg);
+    transform: rotate(-18deg);
     position: absolute;
-    left: 55%;
-    // left: 40%;
-    bottom: 2%;
+    // left: 55%;
+    // left: 0%;
+    right: 20%;
+    bottom: 18%;
     z-index: 2;
   }
 
@@ -646,9 +647,42 @@ export default {
     margin-top: 4vh;
     transition: none !important;
   }
+
+  .service-btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10rem;
+
   .service-btn {
     opacity: 1 !important;
   }
+
+  .swedish,
+  .hot-stone,
+  .raindrop,
+  .prenatal,
+  .cupping,
+  .moxa,
+  .gua-sha,
+  .infrared,
+  .cbd,
+  .cryo {
+    margin-top: 0;
+    height: 14rem !important;
+    width: 26rem !important;
+    position: relative;
+    transform: rotate(-2deg);
+    top: -6rem;
+    left: 0;
+  }
+    
+
+  .faq-container {
+    margin: -8rem auto;
+  }
+}
 
 
 

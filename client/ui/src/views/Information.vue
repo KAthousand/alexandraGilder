@@ -25,17 +25,16 @@
             "
           ></v-divider>
           <v-card-text class="location-text">
-            <p>1320 N Campbell Rd.</p>
-            <p>Royal Oak, MI, 48067</p>
-            <!-- <p>Inside Folio Coworking Space</p> -->
-            <!-- <span class="location-detail"
-              >* Metered parking in street or shared lot behind Imperial. <br />
-              Please enter through front door.</span
-            > -->
+            <p>23706 Vassar Ave.</p>
+            <p>Hazel Park, MI, 48030</p>
+            <p>Located on the corner of Vassar and Tucker.</p>
+            <span class="location-detail"
+              >* Please park on Tucker Ave.</span
+            >
             <v-btn
               class="view-map-btn"
               depressed
-              href="https://www.google.com/maps/place/1320+N+Campbell+Rd,+Royal+Oak,+MI+48067/@42.5017229,-83.1267433,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c5807f21cc6f:0x689ba551598cd2b!8m2!3d42.5017229!4d-83.1245493!16s%2Fg%2F11g4g71hys"
+              href="https://www.google.com/maps/place/23706+Vassar+Ave,+Hazel+Park,+MI+48030/data=!4m2!3m1!1s0x8824cfc9697ecb7b:0xc41d9bac01f38e56?sa=X&ved=1t:242&ictx=111"
               target="_blank"
               >View on map</v-btn
             >
@@ -43,7 +42,7 @@
         </div>
         <div class="d-flex justify-center align-center">
           <a
-            href="https://www.google.com/maps/place/1320+N+Campbell+Rd,+Royal+Oak,+MI+48067/@42.5017229,-83.1267433,17z/data=!3m1!4b1!4m6!3m5!1s0x8824c5807f21cc6f:0x689ba551598cd2b!8m2!3d42.5017229!4d-83.1245493!16s%2Fg%2F11g4g71hys"
+            href="https://www.google.com/maps/place/23706+Vassar+Ave,+Hazel+Park,+MI+48030/data=!4m2!3m1!1s0x8824cfc9697ecb7b:0xc41d9bac01f38e56?sa=X&ved=1t:242&ictx=111"
             target="_blank"
             class="location-img-container"
           >
@@ -101,8 +100,8 @@
 </template>
 
 <script>
-import bamboo from "../assets/img/allyLocationPhoto.png"
-import map from "../assets/img/allyMapLocation.png"
+import map from "../assets/img/allyLocationPhoto.png"
+import bamboo from "../assets/img/allyMapLocation.webp"
 export default {
   data: () => ({
     map: map,
@@ -199,6 +198,7 @@ export default {
         font-style: italic;
         text-align: center;
         padding: 1rem 0;
+        font-size: 1.2rem;
       }
 
       .view-map-btn {
