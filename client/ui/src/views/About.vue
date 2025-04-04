@@ -78,7 +78,7 @@
 </template>
 
 <script>
-import allyPhoto from "../assets/img/allyBioPhoto02.jpg"
+import allyPhoto from "../assets/img/allyBioPhoto3.jpg"
 export default {
   props: {
     activeSection: {
@@ -269,55 +269,113 @@ i {
   transition: 0.5s;
 }
 
-@media (max-width: 1400px) {
-  .about-container {
-    margin-top: 10rem;
-    padding: 0 !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-    height: 105% !important;
-  }
-  .about-title {
-    width: 75%;
-    top: 8vh !important;
-    right: 20% !important;
-  }
+// @media (max-width: 1400px)
 
-  .about-content {
-    padding: 0;
+// @media (max-width: 1400px) {
+//   .about-container {
+//     margin-top: 10rem;
+//     padding: 0 !important;
+//     width: 100vw !important;
+//     max-width: 100vw !important;
+//     height: 105% !important;
+//   }
+//   .about-title {
+//     width: 75%;
+//     top: 8vh !important;
+//     right: 20% !important;
+//   }
+
+//   .about-content {
+//     padding: 0;
+//     margin: 0 !important;
+//     width: 100vw;
+//     max-width: 100vw;
+//     border-radius: 0 !important;
+//     background-image: url("../assets/svgs/about2.svg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//   }
+
+//   .about-text-content {
+//     top: 20% !important;
+//     left: auto !important;
+//     right: 8% !important;
+//   }
+//   .about-img-container {
+//     height: 75%;
+//     width: 50% !important;
+//     .about-img {
+//       top: 20% !important;
+//     }
+//   }
+//   .contact-info {
+//     left: -1% !important;
+//   }
+
+//   .contact-info {
+//     height: 12rem !important;
+//     display: flex;
+//     flex-wrap: wrap;
+//     left: 2% !important;
+//     bottom: 8% !important;
+//     width: 96%;
+//   }
+//   .contact-email {
+//     order: 1;
+//     width: 100%;
+//   }
+//   .contact-insta,
+//   .contact-phone {
+//     height: 80% !important;
+//     width: 40% !important;
+//     height: 100%;
+//     position: absolute !important;
+//     // top: -60%;
+//     transform: rotate(-10deg);
+//   }
+//   .contact-insta {
+//     right: 0%;
+//     transform: rotate(10deg);
+//   }
+// }
+
+// @media (max-height: 900px) and (1530px >= width >= 910px) {
+@media (height <= 900px), (1400px >= width >= 910px) {
+  .about-container { 
+    padding: 0 !important;
     margin: 0 !important;
     width: 100vw;
     max-width: 100vw;
-    border-radius: 0 !important;
-    background-image: url("../assets/svgs/about2.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  }
+  .about-title {
+    width: 75%;
+    top: 12vh !important;
+    right: 15% !important;
+  }
+
+  .about-content {
+    padding-top: 10rem !important;
+    margin: 0 !important;
+    width: 100vw;
+    max-width: 100vw;
   }
 
   .about-text-content {
     top: 20% !important;
     left: auto !important;
     right: 8% !important;
-  }
-  .about-img-container {
-    height: 75%;
-    width: 50% !important;
-    .about-img {
-      top: 20% !important;
-    }
-  }
-  .contact-info {
-    left: -1% !important;
+    width: 40% !important;
   }
 
   .contact-info {
     height: 12rem !important;
     display: flex;
     flex-wrap: wrap;
-    left: 2% !important;
-    bottom: 8% !important;
-    width: 96%;
+    right: 0;
+    left: auto;
+    bottom: 2% !important;
+    width: 100%;
   }
   .contact-email {
     order: 1;
@@ -339,13 +397,17 @@ i {
 }
 
 @media (max-width: 910px) {
-  .about-container {
-    // margin-top: 10rem;
+  .about-container { 
 
     height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw;
+    max-width: 100vw;
   }
 
   .about-content {
+    padding-top: 5vh;
     border-radius: 0 !important;
     background-image: url("../assets/svgs/about2.svg");
     background-repeat: no-repeat;
@@ -358,7 +420,7 @@ i {
   }
 
   .about-img-container {
-    height: 75%;
+    height: 150%;
     width: 100% !important;
 
     .about-img {
@@ -367,6 +429,7 @@ i {
       opacity: 1 !important;
       top: 14% !important;
       left: auto !important;
+
       right: 25%;
       z-index: 4;
       width: 50% !important;
@@ -379,7 +442,7 @@ i {
   .about-title {
     transition: none !important;
     width: 100%;
-    top: 2vh !important;
+    top: 7vh !important;
     left: 0rem;
     h2 {
       font-size: 7.5rem !important;
@@ -392,10 +455,10 @@ i {
   }
   .about-text-content {
     opacity: 1 !important;
-    top: 38% !important;
+    top: 45% !important;
     left: auto !important;
-    right: 15% !important;
-    width: 70% !important;
+    right: 5% !important;
+    width: 90% !important;
     font-size: 1.8rem !important;
 
     p {
@@ -412,8 +475,9 @@ i {
     height: 12rem !important;
     display: flex;
     flex-wrap: wrap;
-    left: 2% !important;
-    bottom: 6% !important;
+    right: 0;
+    left: auto;
+    bottom: 3% !important;
     width: 96%;
   }
   .contact-email {
@@ -435,21 +499,6 @@ i {
   }
 }
 @media (max-width: 599px) {
-  .about-text-content {
-    width: 92% !important;
-    left: 0% !important;
-    top: 42% !important;
-    right: auto !important;
-    margin: 0 4% !important;
-
-    p {
-      font-size: 1.5rem !important;
-      line-height: 2.1rem !important;
-    }
-  }
-}
-
-@media (max-height: 599px) {
   .about-text-content {
     width: 92% !important;
     left: 0% !important;

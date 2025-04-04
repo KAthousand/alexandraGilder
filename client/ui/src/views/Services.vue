@@ -67,15 +67,13 @@
             </v-img>
             <v-card-text class="dialog-text-container">
               <v-divider></v-divider>
-              <div class="dialog-text" style="height: 73%">
+              <div class="dialog-text" style="height: 90%">
                 <p>{{ currentMassage.description }}</p>
               </div>
               <v-divider></v-divider>
-              <div class="dialog-text" style="height: 50%">
-                <h6>{{ currentMassage.price }}</h6>
-                <h6>{{ currentMassage.price2 }}</h6>
+              <div class="dialog-text" style="height: 20%"> 
                 <h6>{{ currentMassage.addon }}</h6>
-              </div>
+              </div> 
             </v-card-text>
             <v-card-actions class="btn-container">
               <v-btn
@@ -125,8 +123,8 @@ export default {
         description:
           "60 or 90 minute session catered to your physical and emotional needs with aroma therapy and hot towel treatment.",
         img: swedish,
-        price: "$100 per 60 min session",
-        price2: "$130 per 90min session",
+        price: "",
+        price2: "",
         addon: "",
         class: "swedish",
       },
@@ -135,7 +133,7 @@ export default {
         title: "reset",
         description: "A 90 minute full body massage using eucalyptus, oregano, and peppermint oils, cupping, infrared therapy, and hot towel treatment.",
         img: cryo,
-        price: "$150 per session",
+        price: "",
         price2: "",
         addon: "",
         class: "hot-stone",
@@ -145,7 +143,7 @@ export default {
         description:
           "A 90 minute full deep tissue massage with lavender CBD salve, hot towel treatment, and aromatherapy with focus on scalp, hands, and feet.",
         img: moxa,
-        price: "$150 per 90 min massage",
+        price: "",
         price2: "",
         addon: "",
         class: "raindrop",
@@ -155,8 +153,8 @@ export default {
         description:
           "Full body customized massage session to support the growing body's natural transitions through childbirth. This massage is typically sidelying using pillows for comfort. if discomfort occurs, we will use a yoga ball seated position for session",
         img: prenatal,
-        price: "$100 per 60 min session",
-        price2: "$130 per 90 min session",
+        price: "",
+        price2: "",
         addon: "",
         class: "gua-sha",
       },
@@ -165,7 +163,7 @@ export default {
         description:
           "A 90 minute full body massage with lemongrass, cedar, and rosemary essential oils, hot towel treatment, cupping, and moxa with attention to abdomen and hips.",
         img: cupping,
-        price: "$160 per 90 min session",
+        price: "",
         price2: "",
         addon: "",
         class: "cupping",
@@ -175,30 +173,42 @@ export default {
         description:
           "Full body dry brushing and 60 minute full body massage with aromatherapy and hot towel treatment. Total session is 90 minutes.",
         img: aleahiaHand,
-        price: "$150 per 90 min session",
+        price: "",
         price2: "",
         addon: "",
         class: "moxa",
       },
-      // {
-      //   title: "tmj session",
-      //   description:
-      //     "60 minute massage session including buccal massage (inside of mouth), facial massage, gua sha, cupping of the neck and face, deep tissue neck and scalp massage",
-      //   img: guasha,
-      //   price: "$150 per 60 min session",
-      //   price2: "",
-      //   addon: "* This session is not full body.",
-      //   class: "gua-sha",
-      // },
+
       {
         title: "polish & tone",
         description:
           "Full body dry brushing, hot towel treatment, full body gua sha, and 60 minute massage. Total session is 90 minutes.",
         img: prenatal,
-        price: "$160 per 90 min session",
+        price: "",
         price2: "",
         addon: "",
         class: "infrared",
+      },
+
+      {
+        title: "cleanse & mini facial",
+        description:
+          "Full body dry brushing to stimulate lymph and exfoliate + 60 minute full body massage with aromatherapy and hot towel treatment. \n Mini facial includes facial dry brushing, facial massage, and sheet mask.",
+        img: cbd,
+        price: "",
+        price2: "",
+        addon: "90 min session",
+        class: "cbd",
+      },
+      {
+        title: "main squeeze",
+        description:
+          "45 min massage // back, shoulders, neck, & head.",
+        img: guasha,
+        price: "",
+        price2: "",
+        addon: "",
+        class: "prenatal",
       },
       {
         title: "which offer is right for me?",
@@ -210,16 +220,6 @@ export default {
         addon: "",
         class: "faq-container",
       },
-      // {
-      //   title: "steam",
-      //   description:
-      //     "Full body hot stone massage with rose water facial steam",
-      //   img: cbd,
-      //   price: "$150 per 90 min session",
-      //   price2: "",
-      //   addon: "",
-      //   class: "cbd",
-      // },
     ],
   }),
   methods: {
@@ -311,8 +311,8 @@ export default {
     background-position: center;
     transform: rotate(-32deg);
     position: absolute;
-    left: 16%;
-    top: 22%;
+    left: 18%;
+    top: 18%;
     z-index: 2;
   }
 
@@ -352,9 +352,9 @@ export default {
     background-size: contain;
     background-position: center;
     position: absolute;
-    transform: rotate(32deg);
-    right: 5%;
-    top: 22%;
+    transform: rotate(3deg);
+    left: 12%;
+    bottom: 38%;
     z-index: 2;
   }
 
@@ -365,10 +365,10 @@ export default {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    transform: rotate(30deg);
+    transform: rotate(18deg);
     position: absolute;
     left: 18%;
-    bottom: 20%;
+    bottom: 15%;
     z-index: 2;
   }
 
@@ -425,10 +425,10 @@ export default {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    transform: rotate(-24deg);
+    transform: rotate(-5deg);
     position: absolute;
-    right: 2%;
-    bottom: 20%;
+    right: 12%;
+    bottom: 38%;
     z-index: 2;
   }
 
@@ -642,9 +642,12 @@ export default {
 }
 
 @media (max-width: 821px) {
+    .container {
+      height: 105%;
+  }
   .services-title {
     opacity: 1;
-    margin-top: 4vh;
+    margin-top: 2vh;
     transition: none !important;
   }
 
@@ -653,7 +656,7 @@ export default {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 8rem;
 
   .service-btn {
     opacity: 1 !important;
@@ -670,12 +673,17 @@ export default {
   .cbd,
   .cryo {
     margin-top: 0;
-    height: 14rem !important;
-    width: 26rem !important;
+    height: 10rem !important;
+    width: 22rem !important;
     position: relative;
     transform: rotate(-2deg);
+    // top: 0;
     top: -6rem;
     left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
   }
     
 
