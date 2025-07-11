@@ -21,6 +21,13 @@
         target="_blank"
         ><h3>BOOK APPOINTMENT</h3></v-btn
       >
+      <v-btn
+        class="nav-menu"
+        text
+        href="https://app.squareup.com/gift/MLTCYCR3CM98Y/order"
+        target="_blank"
+        ><h3>GIFT CARD</h3></v-btn
+      >
     </div>
     <v-btn icon @click.stop="handleNavClick($event)" class="dash-nav-btn"
       ><v-icon class="open-icon" color="secondary">menu</v-icon></v-btn
@@ -129,7 +136,7 @@ export default {
   transition: 0.5s ease-in-out;
 }
 
-@media (max-width: 821px) {
+@media (max-width: 940px) {
   .nav-container {
     height: 10vh;
     background-color: transparent !important;

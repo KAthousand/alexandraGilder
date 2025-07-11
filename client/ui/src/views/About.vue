@@ -31,11 +31,15 @@
             :style="activeSection === 2 ? 'opacity: 1' : 'opacity: 0'"
           >
             <p>
-              Alexandra is a Michigan licensed Massage Therapist based in the metro Detroit area. Specializing in modalities such as prenatal massage, trigger point therapy, gua sha, cupping, buccal and facial massage for TMJ, muscle lifting, etc.
+              Alexandra is a Michigan licensed Massage Therapist based in the metro Detroit area. Specializing in modalities such as prenatal massage, trigger point therapy, gua sha, cupping, facial massage for TMJ, and deep tissue relaxation etc.
             </p>
             <br />
             <p>
-              Her training is vast amongst places like Irene’s Myomassology Institute and the Esalen Institute. Alexandra is a spiritually curious practitioner &amp; avid student of the body. Sessions reflect your personal and emotional needs. Inquire within to better customize your experience.
+              Her training is vast amongst places like Irene’s Myomassology Institute, the Esalen Institute and most recently ACOLS to be certified in lymphatic drainage, specifically the Vodder technique. 
+            </p>
+            <br/>
+            <p>
+              Alexandra is a spiritually curious practitioner &amp; avid student of the body. Sessions reflect your personal and emotional needs. Inquire within to better customize your experience.
             </p>
             <br />
             <p>

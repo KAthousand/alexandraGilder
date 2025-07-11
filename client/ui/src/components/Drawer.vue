@@ -26,6 +26,13 @@
           target="_blank"
           ><h3>BOOK APPOINTMENT</h3></v-btn
         >
+              <v-btn
+        class="nav-menu"
+        text
+        href="https://app.squareup.com/gift/MLTCYCR3CM98Y/order"
+        target="_blank"
+        ><h3>GIFT CARD</h3></v-btn
+      >
       </div>
       <v-btn icon @click.stop="handleNavClick($event)" class="dash-nav-btn"
         ><v-icon class="close-icon" color="secondary"

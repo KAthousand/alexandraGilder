@@ -66,11 +66,11 @@
               </template>
             </v-img>
             <v-card-text class="dialog-text-container">
-              <v-divider></v-divider>
+              <v-divider v-if="currentMassage.title !== 'lymphatic drainage'"></v-divider>
               <div class="dialog-text" style="height: 90%">
                 <p>{{ currentMassage.description }}</p>
               </div>
-              <v-divider></v-divider>
+              <v-divider v-if="currentMassage.title !== 'lymphatic drainage'"></v-divider>
               <div class="dialog-text" style="height: 20%"> 
                 <h6>{{ currentMassage.addon }}</h6>
               </div> 
@@ -137,6 +137,15 @@ export default {
         price2: "",
         addon: "",
         class: "hot-stone",
+      },
+      {
+        title: "lymphatic drainage",
+        description: `Manual lymphatic drainage is a type of manual manipulation of the skin, not to be confused with massage, based on the hypothesis that it will encourage the natural drainage of the lymph, which carries waste products away from the tissues back toward the heart. This is very light touch, think the weight of a nickel. I offer just lymphatic drainage sessions and combo massage and lymphatic drainage sessions( see service menu during booking for more details).`,
+        img: prenatal,
+        price: "",
+        price2: "",
+        addon: "",
+        class: "lymph",
       },
       {
         title: "deep rest",
@@ -238,7 +247,9 @@ export default {
 .container {
   height: 100%;
   width: 100%;
-  padding: 5%;
+  max-Width: 100%;
+  padding:  5%;
+  margin: 0;
 }
 
 .transition-in {
@@ -286,7 +297,7 @@ export default {
   box-shadow: 0px 20px 38px -21px rgba(0, 0, 0, 0.46) !important;
   height: 100%;
   width: 100%;
-  max-width: 1400px;
+  // max-width: 1400px;
   position: relative;
 }
 
@@ -325,7 +336,21 @@ export default {
     background-position: center;
     position: absolute;
     transform: rotate(-10deg);
-    left: 40%;
+    left: 33%;
+    top: 5%;
+    z-index: 2;
+  }
+
+    .lymph {
+    height: 15rem !important;
+    width: 20rem !important;
+    background-image: url("../assets/svgs/prenatal.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    transform: rotate(10deg);
+    left: 50%;
     top: 5%;
     z-index: 2;
   }
@@ -549,6 +574,7 @@ export default {
 
 @media (max-width: 1400px) {
   .container {
+    // padding: 4vh 0 4vh 0 !important;
     padding: 6vh 0 6vh 0 !important;
     max-width: 100vw !important;
     width: 100vw !important;
@@ -597,7 +623,8 @@ export default {
     .gua-sha,
     .infrared,
     .cbd,
-    .cryo {
+    .cryo,
+    .lymph {
       height: 10rem !important;
       width: 20rem !important;
       position: relative;
@@ -606,7 +633,6 @@ export default {
       left: 0;
     }
     
-
     .prenatal,
     .moxa,
     .cbd {
@@ -614,7 +640,7 @@ export default {
       transform: rotate(10deg);
     }
 
-    .hot-stone {
+    .hot-stone, .lymph {
       margin-top: 3rem;
       transform: rotate(5deg);
     }
@@ -671,7 +697,8 @@ export default {
   .gua-sha,
   .infrared,
   .cbd,
-  .cryo {
+  .cryo,
+  .lymph {
     margin-top: 0;
     height: 10rem !important;
     width: 22rem !important;
@@ -773,7 +800,8 @@ export default {
     .gua-sha,
     .infrared,
     .cbd,
-    .cryo {
+    .cryo,
+    .lymph {
       height: 8rem !important;
       width: 15rem !important;
       position: relative;
