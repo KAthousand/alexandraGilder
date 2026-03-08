@@ -53,17 +53,20 @@ export default {
   width: 100%;
 
   .title-content {
-    width: 80%;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     .name {
       width: 100%;
       display: flex;
       justify-content: center;
+      align-self: center;
       font-family: var(--font-display);
       color: var(--light);
       font-weight: bold;
       letter-spacing: 0.8rem;
       font-size: 12rem;
+      width: 80%;
 
       .first-name {
         margin-right: 5rem;
@@ -93,7 +96,7 @@ export default {
 }
 
 // /* media qs ----------------------- */
-@media (max-width: 1330px) {
+@media (min-width: 900px) {
   .name {
     h1 {
       font-size: 12rem !important;
@@ -101,7 +104,7 @@ export default {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 940px) {
   .name {
     flex-direction: column;
     text-align: center;
@@ -109,6 +112,7 @@ export default {
     align-items: center;
     h1 {
       line-height: 10rem;
+      font-size: 8rem !important;
     }
   }
   .first-name {
@@ -141,6 +145,8 @@ export default {
     margin-bottom: 2rem;
   }
 }
+
+// @media(max-height: )
 
 @media screen and (max-height: 400px) and (max-width: 850px) {
   .name {

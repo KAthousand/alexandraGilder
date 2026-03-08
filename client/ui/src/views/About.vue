@@ -66,7 +66,7 @@
             </div>
             <div class="contact-insta">
               <a
-                href="http://www.instagram.com/chillbabes"
+                href="http://www.instagram.com/goodattouching"
                 target="_blank"
                 rel="noreferrer"
                 class="info-link"
@@ -572,7 +572,7 @@ i {
   }
 }
 
-@media (max-width: 385px), (height <= 670px) {
+@media (max-width: 385px), (height <= 800px) {
   .about-container { 
     padding: 0 !important;
     margin: 0 !important;
@@ -612,9 +612,9 @@ i {
   .about-text-content {
     width: 92% !important;
     left: 0% !important;
-    top: 23% !important;
+    top: 30% !important;
     right: auto !important;
-    margin: 0 4% !important;
+    margin: auto 4% !important;
 
     p {
       font-size: 1.35rem !important;

@@ -14,6 +14,13 @@
       >
         <h3>{{ anchor }}</h3>
       </v-btn>
+       <v-btn
+        class="nav-menu"
+        text
+        @click="handlePoliciesClick()"
+        target="_blank"
+        ><h3>POLICIES</h3></v-btn
+      >
       <v-btn
         class="nav-menu"
         text
@@ -70,6 +77,10 @@ export default {
     handleNavClick(value) {
       this.$emit("nav-click")
     },
+    handlePoliciesClick()
+    {
+      this.$emit('policy-click')
+    }
   },
 }
 </script>

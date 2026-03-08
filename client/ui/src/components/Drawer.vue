@@ -20,13 +20,20 @@
           <h3>{{ anchor }}</h3>
         </v-btn>
         <v-btn
+        class="nav-menu"
+        text
+        @click="handlePoliciesClick()"
+        target="_blank"
+        ><h3>POLICIES</h3></v-btn
+      >
+        <v-btn
           class="nav-menu"
           text
           href="https://squareup.com/appointments/book/u7lab3kdl18r47/L6X4E0YVBM4WG/services"
           target="_blank"
           ><h3>BOOK APPOINTMENT</h3></v-btn
         >
-              <v-btn
+        <v-btn
         class="nav-menu"
         text
         href="https://app.squareup.com/gift/MLTCYCR3CM98Y/order"
@@ -71,6 +78,10 @@ export default {
     handleTouch(value) {
       this.$emit("route-touch", value)
     },
+    handlePoliciesClick()
+    {
+      this.$emit('policy-click')
+    }
   },
 }
 </script>

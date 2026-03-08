@@ -56,7 +56,7 @@
           <div class="dialog-content">
             <v-img height="50%" class="dialog-img" :src="currentMassage.img">
               <template v-slot:placeholder>
-                <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-row class="fill-height ma-0" alignContent="center" justify="center">
                   <v-progress-circular
                     indeterminate
                     :color="'var(--rainbow-pink)'"
@@ -66,14 +66,14 @@
               </template>
             </v-img>
             <v-card-text class="dialog-text-container">
-              <v-divider v-if="currentMassage.title !== 'lymphatic drainage'"></v-divider>
-              <div class="dialog-text" style="height: 90%">
+              <v-divider></v-divider>
+              <div class="dialog-text">
                 <p>{{ currentMassage.description }}</p>
               </div>
-              <v-divider v-if="currentMassage.title !== 'lymphatic drainage'"></v-divider>
-              <div class="dialog-text" style="height: 20%"> 
+              <v-divider></v-divider>
+              <!-- <div class="dialog-text" style="height: 20%"> 
                 <h6>{{ currentMassage.addon }}</h6>
-              </div> 
+              </div>  -->
             </v-card-text>
             <v-card-actions class="btn-container">
               <v-btn
@@ -140,7 +140,10 @@ export default {
       },
       {
         title: "lymphatic drainage",
-        description: `Manual lymphatic drainage is a type of manual manipulation of the skin, not to be confused with massage, based on the hypothesis that it will encourage the natural drainage of the lymph, which carries waste products away from the tissues back toward the heart. This is very light touch, think the weight of a nickel. I offer just lymphatic drainage sessions and combo massage and lymphatic drainage sessions( see service menu during booking for more details).`,
+        description: `Manual lymphatic drainage is a type of manual manipulation of the skin, 
+        not to be confused with massage, based on the hypothesis that it will encourage the natural drainage of the lymph,
+        which carries waste products away from the tissues back toward the heart. This is very light touch, think the weight of a nickel.
+        I offer just lymphatic drainage sessions and combo massage and lymphatic drainage sessions (see service menu during booking for more details).`,
         img: prenatal,
         price: "",
         price2: "",
@@ -499,6 +502,9 @@ export default {
   height: 100%;
   width: 100%;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .dialog-img {
     position: relative;
@@ -514,7 +520,7 @@ export default {
   }
 
   .dialog-text-container {
-    height: 40%;
+    height: 100%;
     margin-top: 1rem;
     position: relative;
 
@@ -545,6 +551,7 @@ export default {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    height: 20%;
 
     .book-btn {
       background-color: var(--dark);

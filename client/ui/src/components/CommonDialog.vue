@@ -15,10 +15,7 @@
           ></v-btn
         >
       </v-card-title>
-
-      <v-card-actions style="height: 100%">
         <slot name="content"></slot>
-      </v-card-actions>
     </v-card>
   </v-dialog>
 </template>
@@ -54,6 +51,7 @@ export default {
 // This CSS cannot be scoped because the dialog is mounted near the root of the app -- v-deep will not work
 .v-dialog {
   margin: 0 !important;
+  height: 90vh;
   box-shadow: none !important;
   border-radius: 30px !important;
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.5) !important;
@@ -85,6 +83,7 @@ export default {
 
   .v-card__actions {
     padding: 0 !important;
+    height: 100%;
   }
 
   .action-buttons-container {

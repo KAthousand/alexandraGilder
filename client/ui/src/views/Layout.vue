@@ -12,6 +12,7 @@
       :activeSection="activeSection"
       @route-click="handleRouteClick"
       @nav-click="handleNavClick"
+      @policy-click="handlePoliciesClick"
     />
     <Drawer
       :open="open"
@@ -20,7 +21,14 @@
       @route-click="handleRouteClick"
       @nav-click="handleNavClick"
       @route-touch="handleRouteTouch"
+      @policy-click="handlePoliciesClick"
     />
+    <div v-if="this.isPoliciesOpen">
+      <PoliciesDialog  
+        :open="isPoliciesOpen"
+        :dialogMaxWidth="500"
+        @dialog-closed="handlePoliciesClick()"/>
+    </div>
     <div class="layout-content" id="layout-cont" ref="layoutContent">
       <section class="fullpage" id="home" ref="home" style="margin-top: 0">
         <Title :active-section="activeSection" />
@@ -46,11 +54,13 @@ import Services from "./Services.vue"
 import Title from "./Title.vue"
 import Vue from "vue"
 import Drawer from "../components/Drawer.vue"
+import PoliciesDialog from "@/components/PoliciesDialog.vue"
 
 export default Vue.extend({
-  components: { Nav, Title, About, Services, Information, Drawer },
+  components: { Nav, Title, About, Services, Information, Drawer, PoliciesDialog },
   data: () => ({
     open: false,
+    isPoliciesOpen: false,
     inMove: false,
     activeSection: 0,
     offsets: [],
@@ -77,7 +87,6 @@ export default Vue.extend({
   },
   methods: {
     handleNavClick() {
-      console.log("clicked")
       this.open = !this.open
     },
 
@@ -102,6 +111,11 @@ export default Vue.extend({
       } else if (e.detail < 0 && !this.inMove) {
         this.movePrevious()
       }
+    },
+
+    handlePoliciesClick()
+    {
+      this.isPoliciesOpen = !this.isPoliciesOpen;
     },
 
     // touchStart(e) {
