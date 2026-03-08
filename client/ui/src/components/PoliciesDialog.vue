@@ -83,11 +83,14 @@ export default {
 .policy-content{
   height: 80%;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 5.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   p {
-    font-size: 1.15rem;
-    line-height: 1.6rem;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.5px;
     font-weight: 400;
     margin-bottom: 0;
   }

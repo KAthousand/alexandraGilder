@@ -105,7 +105,7 @@ export default {
 }
 
 .dialog-card {
-  height: 90vh;
+  height: 100% !important;
   border-radius: 30px !important;
   padding: 5.5rem 4rem;
   color: var(--text);
@@ -118,7 +118,6 @@ export default {
     margin-top: -4vh;
   }
   .dialog-card {
-    height: 75vh !important;
     width: 100% !important;
   }
 }

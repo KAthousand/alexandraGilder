@@ -599,7 +599,7 @@ export default {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1040px) {
   .services-title {
     position: relative;
     top: 0;
@@ -612,6 +612,8 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    height: 80%;
+    margin: 0 auto;
     align-items: center;
 
     .service-btn {
