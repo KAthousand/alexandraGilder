@@ -84,9 +84,14 @@ export default {
   height: 80%;
   width: 100%;
   padding: 2rem 5.25rem;
-  display: flex;
+
+  .policy-text{
+    height: 100%;
+      display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  }
+
   p {
     font-size: 1.5rem;
     line-height: 1.9rem;
@@ -104,5 +109,15 @@ export default {
   .bold{
     font-weight: 800;
   }
+}
+
+@media (max-width: 400px) {
+  .policy-title{
+    padding-top: 1rem;
+  }
+    .policy-content {
+      height: 100%;
+      padding: 1.5rem 2rem;
+    }
 }
 </style>

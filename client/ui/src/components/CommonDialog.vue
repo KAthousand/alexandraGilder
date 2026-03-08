@@ -56,6 +56,7 @@ export default {
   border-radius: 30px !important;
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.5) !important;
 
+
   .v-sheet,
   .v-card {
     box-shadow: none !important;
@@ -106,9 +107,11 @@ export default {
 
 .dialog-card {
   height: 100% !important;
+  height: 90vh;
   border-radius: 30px !important;
   padding: 5.5rem 4rem;
   color: var(--text);
+    overflow-y: hidden;
 }
 
 @media (max-width: 600px) {
@@ -118,6 +121,7 @@ export default {
     margin-top: -4vh;
   }
   .dialog-card {
+    // height: 75vh !important;
     width: 100% !important;
   }
 }
