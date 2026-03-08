@@ -192,4 +192,13 @@ export default {
     z-index: 99;
   }
 }
+
+@media (max-height: 735px) {
+  .dash-nav-container {
+    .nav-drawer {
+      height: 60% !important;
+      width: 100% !important;
+    }
+  }
+}
 </style>

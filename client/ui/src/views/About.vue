@@ -585,7 +585,7 @@ i {
   }
 
   .about-content {
-    padding-top: 10rem !important;
+    padding-top: 9rem !important;
     margin: 0 !important;
     width: 100vw;
     max-width: 100vw;
@@ -611,7 +611,7 @@ i {
   .about-text-content {
     width: 92% !important;
     left: 0% !important;
-    top: 30% !important;
+    top: 20% !important;
     right: auto !important;
     margin: auto 4% !important;
 
