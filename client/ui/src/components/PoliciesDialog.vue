@@ -1,6 +1,6 @@
 <template>
   <CommonDialog
-        :open="open"
+        :open="isPoliciesOpen"
         :dialogMaxWidth="500"
         @dialog-closed="closeModal()"
       >
@@ -51,14 +51,11 @@ export default {
       type: [Number, String],
       default: 500,
     },
-    open: {
+    isPoliciesOpen: {
       type: Boolean,
       default: false,
     },
   },
-  data: () => ( {
-    open: false,
-  }),
   methods: {
     closeModal() {
       this.$emit("dialog-closed")

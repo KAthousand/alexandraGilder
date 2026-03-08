@@ -18,14 +18,14 @@
       :open="open"
       :anchors="anchors"
       :activeSection="activeSection"
-      @route-click="handleRouteClick"
+      @route-click="handleDrawerRouteClick"
       @nav-click="handleNavClick"
       @route-touch="handleRouteTouch"
       @policy-click="handlePoliciesClick"
     />
     <div v-if="this.isPoliciesOpen">
       <PoliciesDialog  
-        :open="isPoliciesOpen"
+        :isPoliciesOpen="isPoliciesOpen"
         :dialogMaxWidth="500"
         @dialog-closed="handlePoliciesClick()"/>
     </div>
@@ -90,7 +90,8 @@ export default Vue.extend({
       this.open = !this.open
     },
 
-    handleRouteClick(value) {
+    handleRouteClick( value )
+    {
       this.scrollToSection(value, true)
     },
 
@@ -111,11 +112,6 @@ export default Vue.extend({
       } else if (e.detail < 0 && !this.inMove) {
         this.movePrevious()
       }
-    },
-
-    handlePoliciesClick()
-    {
-      this.isPoliciesOpen = !this.isPoliciesOpen;
     },
 
     // touchStart(e) {
@@ -150,6 +146,10 @@ export default Vue.extend({
       if (this.activeSection > this.anchors.length - 1) {
         this.activeSection = 0
       }
+      if ( window.innerWidth <= 1040)
+      {
+        this.handleDrawerRouteClick(this.activeSection, true)
+      }
       this.scrollToSection(this.activeSection, true)
     },
 
@@ -160,11 +160,16 @@ export default Vue.extend({
       if (this.activeSection < 0) {
         this.activeSection = this.anchors.length - 1
       }
+      if ( window.innerWidth <= 1040)
+      {
+        this.handleDrawerRouteClick(this.activeSection, true)
+      }
       this.scrollToSection(this.activeSection, true)
     },
 
     scrollToSection(id, force = false) {
-      if (this.inMove && !force) {
+      if ( this.inMove && !force )
+      {
         return false
       }
       this.activeSection = id
@@ -174,22 +179,45 @@ export default Vue.extend({
       const el = this.$refs[activeRef]
       const count = el.offsetTop - layout.scrollTop
       layout.scrollBy({ top: count, left: 0, behavior: "smooth" })
-
+      
       setTimeout(() => {
         this.inMove = false
       }, 500)
     },
 
-    handleRouteTouch(value) {
+    handleDrawerRouteClick( value, force ) {
+      if ( this.inMove && !force ) {
+        return false
+      }
+      this.activeSection = value
+      this.inMove = true
+      const layout = document.querySelector("#layout-cont")
+      const activeRef = this.anchors[value]
+      const el = this.$refs[activeRef]
+      const count = el.offsetTop - layout.scrollTop
+      layout.scrollBy({ top: count, left: 0, behavior: "smooth" })
+      
+      setTimeout(() => {
+        this.inMove = false
+      }, 500)
+    },
+
+    handleRouteTouch( value ) {
       this.activeSection = value
       const layout = document.querySelector("#layout-cont")
       const activeRef = this.anchors[value]
       const el = this.$refs[activeRef]
       const elTopPos = el.getBoundingClientRect().top
-      console.log(elTopPos)
+    
       layout.scrollBy({ top: elTopPos, behavior: "smooth" })
     },
+
+    handlePoliciesClick()
+    {
+      this.isPoliciesOpen = !this.isPoliciesOpen
+    }
   },
+
 })
 </script>
 
@@ -227,7 +255,7 @@ export default Vue.extend({
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1040px) {
   .fullpage {
     width: 100vw;
     height: 120vh;
@@ -243,6 +271,8 @@ export default Vue.extend({
   .layout-container {
     overflow-x: hidden;
     overflow-y: scroll;
+    //  overflow-y: auto;
+    // -webkit-overflow-scrolling: auto;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }

@@ -70,7 +70,7 @@ export default {
   methods: {
     handleClick(value) {
       this.$emit("route-click", value)
-      this.$emit("nav-click")
+      this.$emit( "nav-click" )
     },
     handleNavClick(value) {
       this.$emit("nav-click")
@@ -142,7 +142,7 @@ export default {
   }
 }
 
-@media (max-width: 821px) {
+@media (max-width: 1040px) {
   .dash-nav-container {
     position: absolute;
     height: 7vh;

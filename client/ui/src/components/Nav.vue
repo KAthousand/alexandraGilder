@@ -91,7 +91,7 @@ export default {
   width: 100%;
   transition: 0.5s;
   z-index: 6;
-  padding-right: 5%;
+  padding-right: 2rem;
 
   .tabs-container {
     height: 100%;
@@ -147,7 +147,7 @@ export default {
   transition: 0.5s ease-in-out;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1040px) {
   .nav-container {
     height: 10vh;
     background-color: transparent !important;
@@ -159,8 +159,8 @@ export default {
   .dash-nav-btn {
     display: block;
     position: absolute;
-    top: 2.5vh;
-    right: 2rem;
+    top: 5vh;
+    right: 5rem;
     z-index: 99;
     border: 2px solid var(--light);
     .open-icon {
