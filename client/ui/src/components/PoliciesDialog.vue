@@ -1,7 +1,8 @@
 <template>
   <CommonDialog
         :open="isPoliciesOpen"
-        :dialogMaxWidth="500"
+        :dialogWidth="'60vw'"
+        :dialogMaxWidth="'800'"
         @dialog-closed="closeModal()"
       >
         <template #title>
@@ -118,6 +119,16 @@ export default {
     .policy-content {
       height: 100%;
       padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-height: 900px) {
+  .policy-title{
+    padding-top: 0rem;
+  }
+    .policy-content {
+      height: 100%;
+      padding: 0.25rem .75rem;
     }
 }
 </style>
