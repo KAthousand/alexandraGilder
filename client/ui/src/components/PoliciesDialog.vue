@@ -1,7 +1,7 @@
 <template>
   <CommonDialog
         :open="isPoliciesOpen"
-        :dialogWidth="'60vw'"
+        :dialogWidth="'500'"
         :dialogMaxWidth="'800'"
         @dialog-closed="closeModal()"
       >

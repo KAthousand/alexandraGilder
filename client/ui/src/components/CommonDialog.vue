@@ -2,6 +2,7 @@
   <v-dialog
     :value="open"
     :width="dialogWidth"
+    :min-width="dialogWidth"
     :max-width="dialogMaxWidth"
     @click:outside="closeModal()"
     @keydown.enter="handleEnterPressed()"
@@ -57,7 +58,6 @@ export default {
 .v-dialog {
   margin: 0 !important;
   height: 90vh;
-  // width: 100%;
   box-shadow: none !important;
   border-radius: 30px !important;
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.5) !important;
